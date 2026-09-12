@@ -156,6 +156,21 @@ notes/each-code-file/            -> future source/config file explanations
 These documents preserve learning state across chats. Detailed operating contract is
 in `notes/LEARNING_SYSTEM.md`.
 
+## Development tooling context
+
+Current verified command environment:
+
+```text
+Developer
+  -> terminal host: ConsoleHost
+  -> shell process: pwsh
+  -> PowerShell edition/version: Core 7.6.5
+  -> current workspace: C:\Users\ajaym\Desktop\Practicle
+```
+
+Yeh development tooling context hai, TaskForge application architecture nahi. No
+TaskForge server process/project-root application exists yet.
+
 ## Implemented file relationships
 
 None. Abhi sirf learning documentation hai.

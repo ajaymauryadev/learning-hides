@@ -9,10 +9,11 @@
 
 ## Current position
 
-- Current phase: Phase 0 — complete
-- Last completed topic: Topic 17 — Learning documentation system
-- Next topic: Phase 1, Topic 18 — Terminal kya hai?
+- Current phase: Phase 1 — Terminal, files aur development environment
+- Last completed topic: Topic 18 — Terminal kya hai?
+- Next topic: Topic 19 — PowerShell command anatomy
 - Phase 0 progress: 17/17 topics complete
+- Phase 1 progress: 1/16 topics complete
 
 ## Topic 1 learning record
 
@@ -1105,6 +1106,67 @@ of truth kaunsi files hain aur code/API/error change par kaunsi docs update hong
 ### Next topic
 
 Phase 1, Topic 18 — Terminal kya hai? Abhi teach/implement nahi kiya gaya.
+
+## Topic 18 learning record
+
+### Topic completed
+
+Topic 18 — Terminal kya hai?
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/018-terminal.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Terminal operating environment ka existing tool hai; package install nahi hua.
+
+### Concepts introduced
+
+- Terminal interface
+- Shell/PowerShell interpreter
+- Terminal versus shell
+- Prompt, command input and Enter execution
+- Standard input, standard output and standard error ka beginner mental model
+- Terminal session and shell process
+- Graphical UI versus command-line interaction
+- Exit code ka preview without detailed implementation
+
+### Data/control flow
+
+```text
+Developer types input in terminal
+  -> terminal passes text to PowerShell shell
+  -> PowerShell interprets and executes requested command/program
+  -> output/error returns through terminal for developer
+```
+
+### Verification performed
+
+- Current working location reported as `C:\Users\ajaym\Desktop\Practicle`.
+- Current shell process reported `pwsh`, PowerShell Core `7.6.5`.
+- Host reported `ConsoleHost`; live process ID was captured during inspection.
+- Lesson includes distinctions, TaskForge uses, safety rules, practice and easy-English
+  interview answer.
+- Exactly Topic 18 complete and Topics 19–33 planned in Phase 1.
+- `taskforge-backend/` was intentionally not created before Topic 33.
+
+### Errors solved
+
+Koi meaningful error nahi aaya.
+
+### Revision required
+
+Student ko terminal, shell, command and process ko separate words mein explain karna
+hai aur input-to-output flow draw karna hai.
+
+### Next topic
+
+Topic 19 — PowerShell command anatomy. Abhi teach/implement nahi kiya gaya.
 
 ## Phase 0 completion record
 
