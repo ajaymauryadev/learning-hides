@@ -56,8 +56,10 @@ Chat memory par depend nahi karna. `BACKEND_ROADMAP.md` direction dega aur `LEAR
 
 - Master plan read and saved.
 - TaskForge application abhi initialize nahi hui hai.
-- Phase 0 ke Topics 1–17 aur Phase 1 ka Topic 18 complete/locally verified hain.
+- Phase 0 ke Topics 1–17 aur Phase 1 ke Topics 18–33 complete/locally verified hain.
+- Phase 1 practical output `taskforge-backend/` exact workspace child ke roop mein exists.
+- Folder empty hai, parent `Practicle` Git work tree ke andar hai, own `.git` nahi.
 - Current curriculum phase: Phase 1 — Terminal, files aur development environment.
 - Current topic lesson folder: `notes/topics/phase-1/`.
-- Next authorized learning step: **Phase 1, Topic 19 — PowerShell command anatomy**.
-- Topic 19 tabhi start karna hai jab student next topic ke liye kahe.
+- Next authorized learning step: **Phase 2, Topic 34 — Version control kya hai?**
+- Topic 34 tabhi start karna hai jab student next topic ke liye kahe.

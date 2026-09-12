@@ -52,34 +52,41 @@ progress ko track karti hai. Topics ko reorder ya skip nahi karna hai.
 **Phase 0 status: complete (17/17 topics locally verified).**
 
 Phase 0 ke baad ordered continuation Phase 1 mein hai. Current next topic:
-Topic 19 — PowerShell command anatomy. It has not started.
+Phase 1 complete hai. Next ordered phase/topic: Phase 2, Topic 34 — Version control kya
+hai? It has not started.
 
 ## Phase 1 — Terminal, files aur development environment
 
 | No. | Topic | Prerequisite | Practical outcome | Status |
 |---:|---|---|---|---|
 | 18 | Terminal kya hai? | Phase 0 | Terminal/shell/session/input-output mental model and current terminal evidence | complete |
-| 19 | PowerShell command anatomy | Topic 18 | Command, arguments, parameters and execution structure | planned |
-| 20 | Current working directory | Topic 19 | Current location inspect/understand karna | planned |
-| 21 | Absolute aur relative paths | Topic 20 | Filesystem locations safely address karna | planned |
-| 22 | File aur folder operations | Topic 21 | Basic safe filesystem operations | planned |
-| 23 | VS Code workspace | Topics 20–22 | Project-focused editor workspace mental model | planned |
-| 24 | Source file aur configuration file | Topic 23 | Code and configuration responsibilities distinguish karna | planned |
-| 25 | File extension ka meaning | Topic 24 | File type/convention interpretation | planned |
-| 26 | Hidden files | Topic 25 | Hidden metadata/config files understand karna | planned |
-| 27 | Environment verification | Topics 18–26 | Required tools systematically verify karna | planned |
-| 28 | Node version | Topic 27 | Installed Node version evidence | planned |
-| 29 | npm version | Topic 28 | Installed npm version evidence | planned |
-| 30 | Git version | Topic 29 | Installed Git version evidence | planned |
-| 31 | VS Code version | Topic 30 | Installed VS Code version evidence | planned |
-| 32 | Port aur process ka basic introduction | Topics 18–31 | Basic process/port operating model | planned |
-| 33 | Project root folder create karna | Topics 18–32 | `taskforge-backend/` project root | planned |
+| 19 | PowerShell command anatomy | Topic 18 | Command, arguments, parameters and execution structure | complete |
+| 20 | Current working directory | Topic 19 | Current location inspect/understand karna | complete |
+| 21 | Absolute aur relative paths | Topic 20 | Filesystem locations safely address karna | complete |
+| 22 | File aur folder operations | Topic 21 | Basic safe filesystem operations | complete |
+| 23 | VS Code workspace | Topics 20–22 | Project-focused editor workspace mental model | complete |
+| 24 | Source file aur configuration file | Topic 23 | Code and configuration responsibilities distinguish karna | complete |
+| 25 | File extension ka meaning | Topic 24 | File type/convention interpretation | complete |
+| 26 | Hidden files | Topic 25 | Hidden metadata/config files understand karna | complete |
+| 27 | Environment verification | Topics 18–26 | Required tools systematically verify karna | complete |
+| 28 | Node version | Topic 27 | Installed Node version evidence | complete |
+| 29 | npm version | Topic 28 | Installed npm version evidence | complete |
+| 30 | Git version | Topic 29 | Installed Git version evidence | complete |
+| 31 | VS Code version | Topic 30 | Installed VS Code version evidence | complete |
+| 32 | Port aur process ka basic introduction | Topics 18–31 | Basic process/port operating model | complete |
+| 33 | Project root folder create karna | Topics 18–32 | `taskforge-backend/` project root | complete |
 
 ### Phase 1 practical output
 
 - [x] Current terminal environment identified
-- [ ] Required development tools verified topic-by-topic
-- [ ] `taskforge-backend/` project root created at Topic 33
-- [ ] Topics 19–33 individually taught and verified
+- [x] Required development tools verified topic-by-topic
+- [x] `taskforge-backend/` project root created at Topic 33
+- [x] Topics 19–33 individually taught and verified
 
-**Phase 1 status: in progress (1/16 topics complete).**
+**Phase 1 status: complete (16/16 topics locally verified).**
+
+## Phase 2 — Git aur repository foundation
+
+Next ordered topic: **Topic 34 — Version control kya hai?** It has not started. Remaining
+Phase 2 topics stay defined in `TASKFORGE_BACKEND_MASTER_PLAN.md` and will be added to
+this active progress table when Phase 2 begins.

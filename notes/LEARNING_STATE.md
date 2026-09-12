@@ -9,11 +9,11 @@
 
 ## Current position
 
-- Current phase: Phase 1 — Terminal, files aur development environment
-- Last completed topic: Topic 18 — Terminal kya hai?
-- Next topic: Topic 19 — PowerShell command anatomy
+- Current phase: Phase 1 — complete
+- Last completed topic: Topic 33 — Project root folder create karna
+- Next topic: Phase 2, Topic 34 — Version control kya hai?
 - Phase 0 progress: 17/17 topics complete
-- Phase 1 progress: 1/16 topics complete
+- Phase 1 progress: 16/16 topics complete
 
 ## Topic 1 learning record
 
@@ -1167,6 +1167,830 @@ hai aur input-to-output flow draw karna hai.
 ### Next topic
 
 Topic 19 — PowerShell command anatomy. Abhi teach/implement nahi kiya gaya.
+
+## Topic 19 learning record
+
+### Topic completed
+
+Topic 19 — PowerShell command anatomy
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/019-powershell-command-anatomy.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Existing PowerShell ke read-only commands use hue.
+
+### Concepts introduced
+
+- Command name and PowerShell `Verb-Noun` convention
+- Positional argument
+- Named parameter and parameter value
+- Switch parameter
+- Tokens, whitespace and quoted values
+- Alias versus full command name
+- Parse, resolve, bind and execute flow
+- Read-only versus state-changing command safety check
+
+### Data/control flow
+
+```text
+Typed command
+  -> tokens parsed
+  -> command resolved
+  -> arguments/parameters bind
+  -> command executes
+  -> output/error returned
+```
+
+### Verification performed
+
+- `Get-Command -Name Get-ChildItem` resolved a PowerShell cmdlet.
+- `Get-ChildItem -Path notes -Filter "*.md" -File` safely listed matching files.
+- Topic note includes anatomy, execution order, errors, exercise and easy-English answer.
+- No TaskForge application folder/package/source/test was created.
+
+### Errors solved
+
+No runtime failure occurred. Lesson documents typo, missing-value, quoting, unsupported
+parameter and wrong-dash error categories with fixes.
+
+### Revision required
+
+Student ko example command mein command, argument, named parameters, values and switch
+label karne hain aur run karne se pehle risk classify karna hai.
+
+### Next topic
+
+Topic 20 — Current working directory. Abhi teach/implement nahi kiya gaya.
+
+## Topic 20 learning record
+
+### Topic completed
+
+Topic 20 — Current working directory
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/020-current-working-directory.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Existing PowerShell ke read-only location commands use hue.
+
+### Concepts introduced
+
+- Current working directory/CWD
+- Directory versus file context
+- `Get-Location` and `pwd` alias
+- Prompt versus reliable location evidence
+- CWD as shell/process-specific context
+- Child process starting context
+- Relative target ka CWD dependency preview
+- Wrong-CWD debugging and safety sequence
+
+### Data/control flow
+
+```text
+PowerShell CWD
+  -> command/program starts
+  -> relative lookup uses working context
+  -> result or file-not-found error returns
+```
+
+### Verification performed
+
+- `Get-Location` reported `C:\Users\ajaym\Desktop\Practicle`.
+- `(Get-Location).Path` matched the same workspace location.
+- `pwd` was verified as an alias for `Get-Location`.
+- Lesson includes diagram, execution order, errors, exercise and easy-English answer.
+- Location was not changed and no project application artifact was created.
+
+### Errors solved
+
+No runtime failure occurred. Lesson explains file/config-not-found and wrong-project
+risk caused by an incorrect CWD, with a safe diagnostic sequence.
+
+### Revision required
+
+Student ko CWD define karna, `Get-Location` se inspect karna aur relative target ka
+base explain karna hai.
+
+### Next topic
+
+Topic 21 — Absolute aur relative paths. Abhi teach/implement nahi kiya gaya.
+
+## Topic 21 learning record
+
+### Topic completed
+
+Topic 21 — Absolute aur relative paths
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/021-absolute-and-relative-paths.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Existing PowerShell ke read-only path commands use hue.
+
+### Concepts introduced
+
+- Filesystem path and path segments
+- Absolute and relative paths
+- CWD-based resolution
+- Current `.` and parent `..` directory markers
+- `Resolve-Path`, `Join-Path` and `Test-Path`
+- Quoted paths and spaces
+- `-Path` versus `-LiteralPath`
+- Wildcard scope and path safety
+- Windows/Linux casing portability
+- Filesystem path versus HTTP/API path
+
+### Data/control flow
+
+```text
+Path input
+  -> absolute: root se resolve
+  -> relative: CWD/base se resolve
+  -> segments normalize
+  -> target lookup
+  -> result/error
+```
+
+### Verification performed
+
+- Absolute, relative and parent-based paths resolved to the same roadmap file.
+- `Test-Path` confirmed targets exist.
+- `Join-Path` produced the intended relative combination.
+- No file or folder was created, moved, modified or deleted by path experiments.
+- Topic note includes diagrams, execution order, errors, exercise and English answers.
+
+### Errors solved
+
+No runtime failure occurred. Wrong CWD, missing quotes, typo, wrong target type,
+non-existing resolution and broad wildcard/parent scope are documented with fixes.
+
+### Revision required
+
+Student ko paths classify/resolve karne aur state-changing command se pehle exact target
+verification sequence explain karni hai.
+
+### Next topic
+
+Topic 22 — File aur folder operations. Abhi teach/implement nahi kiya gaya.
+
+## Topic 22 learning record
+
+### Topic completed
+
+Topic 22 — File aur folder operations
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/022-file-and-folder-operations.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Existing PowerShell filesystem cmdlets use hue.
+
+### Concepts introduced
+
+- Read-only versus state-changing filesystem operations
+- File/directory item types and before/after state
+- Inspect, existence check, create and content read
+- Copy, rename, move and delete differences
+- `-Recurse`, `-Force`, `-WhatIf`, `-Confirm` safety meaning
+- Target collision and permission/error categories
+- Scoped sandbox lifecycle and post-operation verification
+
+### Data/control flow
+
+```text
+before-state inspect
+  -> exact scoped target
+  -> one filesystem operation
+  -> result/error
+  -> after-state verify
+```
+
+### Verification performed
+
+- Workspace child `.topic22-practice` exact absolute path verified before use.
+- Directories and empty file created, file copied, renamed and moved successfully.
+- Resulting tree inspected with `Get-ChildItem`.
+- Practice files individually deleted, then empty directories removed.
+- Final sandbox absence confirmed; broad recursive delete was not used.
+
+### Errors solved
+
+No runtime error occurred. Existing destination, missing parent/path, access denied,
+non-empty directory and wrong-target deletion are documented with safe fixes.
+
+### Revision required
+
+Student ko each operation ka before/after effect predict karna aur exact-target safety
+sequence ke saath disposable sandbox exercise repeat karna hai.
+
+### Next topic
+
+Topic 23 — VS Code workspace. Abhi teach/implement nahi kiya gaya.
+
+## Topic 23 learning record
+
+### Topic completed
+
+Topic 23 — VS Code workspace
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/023-vs-code-workspace.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. VS Code/editor package or extension install nahi hua.
+
+### Concepts introduced
+
+- VS Code role versus shell/runtime/application
+- Loose file, single-folder and multi-root workspace
+- Workspace root, project root and Git root
+- Explorer, editor buffer, integrated terminal and CWD
+- Search/source-control scope
+- Problems, Output, Debug Console and Terminal panels
+- User/workspace/folder settings scopes
+- `.vscode` and `.code-workspace` optional metadata
+- Workspace trust, extensions and secret safety
+
+### Data/control flow
+
+```text
+folder opened as workspace
+  -> editor features get project scope
+  -> terminal shell starts
+  -> CWD verified
+  -> saved files used by commands
+  -> diagnostics/output inspected
+```
+
+### Verification performed
+
+- Current shell context and top-level repository items inspected read-only.
+- `.vscode/` is absent and `.code-workspace` file count is zero.
+- Absence correctly treated as valid, not an error.
+- Lesson includes interface diagram, workflow, errors, exercise and English answers.
+- No workspace metadata, extension or application folder was created.
+
+### Errors solved
+
+No runtime error occurred. Wrong opened folder, loose-file context, terminal-CWD
+assumption, unsaved buffer and extension-dependency mistakes are documented with fixes.
+
+### Revision required
+
+Student ko workspace root/project root/Git root distinguish karne, main VS Code areas
+explain karne aur integrated terminal CWD independently verify karne hain.
+
+### Next topic
+
+Topic 24 — Source file aur configuration file. Abhi teach/implement nahi kiya gaya.
+
+## Topic 24 learning record
+
+### Topic completed
+
+Topic 24 — Source file aur configuration file
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/024-source-and-configuration-files.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Application source/config files intentionally create nahi hue.
+
+### Concepts introduced
+
+- Source logic versus configuration values/options
+- Responsibility-based classification, not extension-only guessing
+- Documentation, data, tests, generated files and dependencies
+- Manifest and tool-managed lockfile roles
+- Environment configuration and precedence
+- Secrets versus non-secret configuration
+- Read, parse, validate, normalize and fail-fast startup flow
+- Disk configuration versus running process state
+
+### Data/control flow
+
+```text
+configuration input
+  -> read/parse/validate/normalize
+  -> source logic receives safe settings
+  -> runtime behavior
+```
+
+### Verification performed
+
+- Current inventory contains 38 Markdown files, zero JavaScript files and no
+  `package.json` at inspection time.
+- Current repository correctly classified as learning documentation, not application
+  source/config implementation.
+- Lesson contains annotated hypothetical JS, mapping, errors, exercise and English answer.
+- No source/config/application artifact was created.
+
+### Errors solved
+
+No runtime error occurred. Extension-only classification, secret commits, unvalidated
+configuration, duplicated settings, hard-coding and stale running config are explained.
+
+### Revision required
+
+Student ko unfamiliar file ko owner, consumer, responsibility and change impact se
+classify karna hai; source/config difference English mein bhi explain karna hai.
+
+### Next topic
+
+Topic 25 — File extension ka meaning. Abhi teach/implement nahi kiya gaya.
+
+## Topic 25 learning record
+
+### Topic completed
+
+Topic 25 — File extension ka meaning
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/025-file-extension-meaning.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Read-only filesystem property inspection use hui.
+
+### Concepts introduced
+
+- Complete filename, base name and extension
+- Extension as format/convention hint, not proof
+- Extension versus format versus responsibility
+- Program association and editor language mode
+- Common backend extensions
+- Multiple dots, compound names and extensionless files
+- Rename versus content conversion
+- Text/binary, MIME type and executable risk
+- Case sensitivity and cross-platform portability
+- Upload/file validation beyond extension
+
+### Data/control flow
+
+```text
+filename/extension hint
+  -> tool/parser selection
+  -> actual content validation
+  -> accept, display, execute or reject decision
+```
+
+### Verification performed
+
+- `BACKEND_ROADMAP.md` properties inspected as name `BACKEND_ROADMAP.md`, base name
+  `BACKEND_ROADMAP`, extension `.md`.
+- Topic-start inventory contained 39 `.md` files and no other file extension.
+- Lesson contains extension map, risks, debugging, exercise and English answers.
+- No application source/config file was created.
+
+### Errors solved
+
+No runtime error occurred. Wrong/double extension, rename-as-conversion, extension-only
+classification, casing mismatch and parser errors are documented with fixes.
+
+### Revision required
+
+Student ko filenames split/classify karne, compound/extensionless cases explain karne
+aur “extension is a hint, not proof” security reasoning English mein state karni hai.
+
+### Next topic
+
+Topic 26 — Hidden files. Abhi teach/implement nahi kiya gaya.
+
+## Topic 26 learning record
+
+### Topic completed
+
+Topic 26 — Hidden files
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/026-hidden-files.md`
+- Updated roadmap, learning state, architecture, debug log and durable memory
+
+### Packages installed
+
+None. Only read-only inspection hui.
+
+### Concepts introduced
+
+- Windows Hidden attribute versus dotfile convention
+- Normal versus `-Force` listing
+- Hidden, ignored, untracked, tracked and secret differences
+- `.git`, `.gitignore`, `.env` and `.env.example` roles
+- VS Code exclusion versus filesystem existence
+- Command-specific `-Force` behavior
+
+### Data/control flow
+
+```text
+item/name/attributes -> view rules -> visible/omitted
+permissions -> access; Git rules -> tracking independently
+```
+
+### Verification performed
+
+- Normal listing omitted `.git`; forced listing included it.
+- `.git` verified as `Hidden, Directory, NotContentIndexed`.
+- No hidden item created, edited, deleted or attribute-changed.
+
+### Errors solved
+
+Git global-ignore permission warning documented; no out-of-scope mutation attempted.
+
+### Revision required
+
+Student ko hidden/ignored/untracked/secret separate define and `.git`/`.env` safety explain
+karni hai.
+
+### Next topic
+
+Topic 27 — Environment verification. Abhi teach/implement nahi kiya gaya.
+
+## Topic 27 learning record
+
+### Topic completed
+
+Topic 27 — Environment verification
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/027-environment-verification.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Read-only environment checks use hue.
+
+### Concepts introduced
+
+- Environment layers and verification evidence ladder
+- Installed/resolvable/runnable/compatible/configured/healthy differences
+- Command type/source/path resolution and PATH mental model
+- Expected versus actual status classification
+- Version/project/service checks as separate layers
+- stdout/stderr/exit evidence and warning classification
+- Reproducible report and safe troubleshooting order
+
+### Verification performed
+
+- CWD, `pwsh` and PowerShell Core identity checked.
+- `node`, `npm`, `git` and `code` commands resolved without version commands.
+- Required learning paths present; TaskForge root expected absent.
+- Exact versions intentionally reserved for Topics 28–31.
+
+### Errors solved
+
+No new runtime failure. Existing Git global-ignore warning was preserved/classified.
+
+### Revision required
+
+Student ko verification report banana and “command found does not prove compatibility”
+explain karna hai.
+
+### Next topic
+
+Topic 28 — Node version. Abhi teach/implement nahi kiya gaya.
+
+## Topic 28 learning record
+
+### Topic completed
+
+Topic 28 — Node version
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/028-node-version.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Node installation/version unchanged.
+
+### Concepts introduced
+
+- CLI and runtime Node version evidence
+- Major/minor/patch anatomy
+- Resolved command versus actual `process.execPath`
+- Platform/architecture identity
+- Version compatibility versus application health
+- Multiple installations and PATH/session risks
+- Time-sensitive LTS/support verification boundary
+
+### Verification performed
+
+- `node --version`, `node -v` and `process.version` agreed on `v24.14.1`.
+- `process.versions.node` returned `24.14.1`.
+- command path and execPath agreed on `C:\Program Files\nodejs\node.exe`.
+- platform `win32`, architecture `x64`, final exit code `0`.
+
+### Errors solved
+
+No Node runtime error occurred. Common resolution/version/session/compatibility failures
+documented with diagnostic steps.
+
+### Revision required
+
+Student ko version anatomy and evidence limits explain karke verification report repeat
+karni hai.
+
+### Next topic
+
+Topic 29 — npm version. Abhi teach/implement nahi kiya gaya.
+
+## Topic 29 learning record
+
+### Topic completed
+
+Topic 29 — npm version
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/029-npm-version.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. npm/package/dependency state unchanged.
+
+### Concepts introduced
+
+- npm package-manager role versus Node runtime
+- npm semantic version anatomy
+- PowerShell `.ps1` wrapper and alternate launchers
+- Local/global package mental model
+- manifest, lockfile and installation directory preview
+- resolution/version/install/registry health boundaries
+- lifecycle-script and install security
+
+### Verification performed
+
+- `npm --version` and `npm -v` both returned `11.11.0`, exit `0`.
+- selected command is `C:\Program Files\nodejs\npm.ps1` ExternalScript.
+- `npm.cmd` and extensionless npm launchers also discovered.
+- `npm prefix` returned current context; `package.json` remained absent.
+
+### Errors solved
+
+No npm error occurred. Script policy, resolution, manifest, permission, conflict and
+registry failure categories documented.
+
+### Revision required
+
+Student ko npm/Node distinguish, wrapper resolution explain and version-check evidence
+limits state karne hain.
+
+### Next topic
+
+Topic 30 — Git version. Abhi teach/implement nahi kiya gaya.
+
+## Topic 30 learning record
+
+### Topic completed
+
+Topic 30 — Git version
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/030-git-version.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Git installation/configuration/repository history unchanged.
+
+### Concepts introduced
+
+- Git versus GitHub
+- upstream semantic version plus Git-for-Windows suffix
+- selected and alternate Git executables
+- build options/platform/build commit
+- CLI identity versus repository/config/remote health
+- local versus remote operations
+- multiple-installation and PATH diagnosis
+
+### Verification performed
+
+- selected Git path `C:\Program Files\Git\cmd\git.exe`.
+- `git --version` returned `2.53.0.windows.2`, exit `0`.
+- build options returned x86_64/build identity, exit `0`.
+- second bundled-runtime Git executable discovered.
+- no Git mutation performed.
+
+### Errors solved
+
+No Git version failure. Existing global-ignore access warning classified separately and
+remains documented.
+
+### Revision required
+
+Student ko Git/GitHub difference, version suffix, selected path and version-check limits
+explain karne hain.
+
+### Next topic
+
+Topic 31 — VS Code version. Abhi teach/implement nahi kiya gaya.
+
+## Topic 31 learning record
+
+### Topic completed
+
+Topic 31 — VS Code version
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/031-vs-code-version.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. VS Code/extensions/settings unchanged.
+
+### Concepts introduced
+
+- VS Code product version/build commit/architecture
+- selected CLI wrapper and alternate launcher
+- editor build commit versus project/Git build commits
+- CLI versus visible GUI installation
+- Stable/channel and multiple-install possibilities
+- extension/workspace/runtime independent version layers
+- time-sensitive update/support boundary
+
+### Verification performed
+
+- `code --version` returned `1.137.0`, build commit, `x64`, exit `0`.
+- selected launcher is user-local Microsoft VS Code `bin\code.cmd`.
+- alternate extensionless launcher discovered.
+- no GUI/config/extension/install mutation performed.
+
+### Errors solved
+
+No VS Code CLI error. Resolution, mismatch, extension, workspace, unsaved and architecture
+failure categories documented.
+
+### Revision required
+
+Student ko three output lines and evidence limits explain karne hain.
+
+### Next topic
+
+Topic 32 — Port aur process ka basic introduction. Abhi teach/implement nahi kiya gaya.
+
+## Topic 32 learning record
+
+### Topic completed
+
+Topic 32 — Port aur process ka basic introduction
+
+### Files created/modified
+
+- Created `notes/topics/phase-1/032-port-and-process-basics.md`
+- Updated roadmap, learning state, architecture, debug log and durable memory
+
+### Packages installed
+
+None. Temporary listener used built-in .NET networking and was stopped.
+
+### Concepts introduced
+
+- Program/source/process/PID distinctions
+- Foreground/background and process lifecycle
+- IP/protocol/port endpoint
+- TCP listener, client connection and ephemeral client port
+- loopback versus all-interface binding
+- port conflict, reachability and race condition
+- graceful shutdown and safe process termination
+
+### Data/control flow
+
+```text
+process binds/listens -> client connects -> server accepts -> sockets close -> port releases
+```
+
+### Verification performed
+
+- `pwsh` process temporarily listened on OS-selected loopback port `63787`.
+- loopback client connected and server accepted it.
+- client temporary port `63788`; owner PID during run `20940`.
+- sockets disposed and listener inactive after stop.
+- no permanent/background server or source file created.
+
+### Errors solved
+
+`Get-NetTCPConnection` returned Access denied. `finally` cleanup stopped listener; a
+permission-free loopback connect/accept check provided alternative evidence. No privilege
+escalation attempted.
+
+### Revision required
+
+Student ko process/PID/port/route distinctions, EADDRINUSE diagnosis and graceful shutdown
+explain karne hain.
+
+### Next topic
+
+Topic 33 — Project root folder create karna. Abhi teach/implement nahi kiya gaya.
+
+## Topic 33 learning record
+
+### Topic completed
+
+Topic 33 — Project root folder create karna
+
+### Files created/modified
+
+- Created empty directory `taskforge-backend/`
+- Created `notes/topics/phase-1/033-create-project-root-folder.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. npm package initialization nahi hui.
+
+### Concepts introduced
+
+- Project root and parent-child boundary
+- Filesystem/Git/workspace/package root distinctions
+- naming convention and collision-safe creation
+- normalized target and post-creation verification
+- empty directory Git tracking behavior
+- nested repository risk
+
+### Data/control flow
+
+```text
+verify parent/target -> create directory -> resolve/type/content verify
+```
+
+### Verification performed
+
+- exact root created at `C:\Users\ajaym\Desktop\Practicle\taskforge-backend`.
+- directory type true and initial child count zero.
+- parent Git top-level remains `C:\Users\ajaym\Desktop\Practicle`.
+- child is inside parent work tree and has no own `.git`.
+- no package/source/config/server created.
+
+### Errors solved
+
+No creation error. Existing parent Git root/nested-repository risk identified and Git
+initialization deferred to ordered Phase 2 learning.
+
+### Revision required
+
+Student ko root distinctions and safe creation/verification algorithm explain karna hai.
+
+### Next topic
+
+Phase 2, Topic 34 — Version control kya hai? Abhi start nahi hua.
+
+## Phase 1 completion record
+
+- Topics complete: 18–33, all 16 locally verified
+- Practical output: `taskforge-backend/` exists as empty project root
+- Tool evidence: PowerShell, Node, npm, Git and VS Code identities recorded
+- Application initialization: not started
+- Next phase: Git aur repository foundation
 
 ## Phase 0 completion record
 

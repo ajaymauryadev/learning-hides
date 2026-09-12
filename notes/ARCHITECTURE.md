@@ -171,6 +171,171 @@ Developer
 Yeh development tooling context hai, TaskForge application architecture nahi. No
 TaskForge server process/project-root application exists yet.
 
+Current command interaction model:
+
+```text
+Terminal input
+  -> PowerShell command parsing
+  -> command resolution
+  -> argument/parameter binding
+  -> command execution
+  -> terminal output or error
+```
+
+Yeh development execution flow hai. TaskForge request flow tab start hoga jab actual
+server application later phases mein create aur run hogi.
+
+Current verified working-directory context:
+
+```text
+PowerShell CWD: C:\Users\ajaym\Desktop\Practicle
+  -> relative development target starts from this context
+  -> future TaskForge commands should normally run from its project root
+```
+
+CWD process/shell context hai, permanent application architecture component nahi.
+
+Development path-resolution model:
+
+```text
+Absolute path -> filesystem drive/root se target
+Relative path -> PowerShell CWD/base + relative segments -> target
+```
+
+Future TaskForge source/config references repository-relative rakhenge where practical;
+developer-specific `C:\Users\...` path application code mein hard-code nahi karenge.
+
+Filesystem-change safety model:
+
+```text
+verify CWD and resolved target
+  -> inspect before-state
+  -> perform one scoped operation
+  -> inspect after-state
+  -> keep or safely clean only verified artifacts
+```
+
+Future source/config file moves or renames ko imports, tests and documentation ke saath
+verify karna hoga.
+
+Editor/workspace boundary:
+
+```text
+VS Code workspace -> development context and tooling scope
+TaskForge project  -> future application files and runtime behavior
+PowerShell CWD     -> command execution context; independently verify
+```
+
+Current repository ko `.vscode/` or `.code-workspace` metadata ki requirement nahi.
+Shared editor configuration only real team/project need justify karegi.
+
+Planned file responsibility boundary:
+
+```text
+Source files        -> TaskForge application logic
+Configuration       -> runtime/tool values and options
+Tests               -> expected behavior verification
+Documentation       -> human-readable intent and learning records
+Generated/tool data -> owning tool/process output
+```
+
+Configuration will be treated as untrusted input: read, parse, validate and normalize
+before application features consume it. Secrets will not be hard-coded or committed.
+
+File identification rule:
+
+```text
+extension/naming hint
+  + actual content/format validation
+  + owner/consumer/responsibility
+  = trustworthy file classification
+```
+
+TaskForge upload or configuration security will never trust filename extension alone.
+
+Hidden/secret boundary:
+
+```text
+Hidden visibility != access control != Git ignore != secret protection
+```
+
+Future `.env` sensitive/ignored hogi; `.env.example` safe placeholders contain karegi.
+`.git/` tooling metadata ko manually mutate nahi karenge.
+
+Environment verification gate:
+
+```text
+CWD/shell -> command resolution -> version compatibility -> project config/dependencies
+-> external services -> application health
+```
+
+Each layer needs separate evidence. Resolvable tool alone does not prove TaskForge health.
+
+Verified Node runtime candidate:
+
+```text
+Node v24.14.1
+  -> C:\Program Files\nodejs\node.exe
+  -> win32 / x64
+  -> compatibility with future TaskForge requirements not yet declared
+```
+
+Runtime support/LTS and dependency compatibility must be verified when choosing the
+project’s declared Node range.
+
+Verified npm CLI candidate:
+
+```text
+npm 11.11.0
+  -> PowerShell selects C:\Program Files\nodejs\npm.ps1
+  -> Node and npm remain separately versioned toolchain components
+```
+
+No manifest, lockfile or dependency installation exists yet.
+
+Verified Git CLI:
+
+```text
+Git 2.53.0.windows.2
+  -> selected C:\Program Files\Git\cmd\git.exe
+  -> alternate bundled-runtime Git also exists
+```
+
+CLI version, repository state, configuration and remote authentication remain separate
+verification layers.
+
+Verified editor CLI:
+
+```text
+VS Code 1.137.0 / build 645f29cc3176500b4b5762ba887cf2a7f0ffdf2c / x64
+  -> selected user-local Microsoft VS Code bin\code.cmd
+```
+
+Editor identity does not prove workspace, extension, terminal or application health.
+
+Future local server binding model:
+
+```text
+Node process (PID)
+  -> TCP socket binds configured address:port
+  -> client connects
+  -> Express later handles HTTP method/path
+```
+
+Development defaults should prefer loopback unless external access is intentionally
+required. Shutdown must close server and other resources gracefully.
+
+## Created TaskForge project boundary
+
+```text
+C:\Users\ajaym\Desktop\Practicle\       <- current Git/repository root
+  taskforge-backend\                     <- created application project root (empty)
+```
+
+`taskforge-backend/` currently parent Git work tree ke andar hai, own `.git` or
+`package.json` nahi. Nested repository initialization Phase 2 concepts/boundary decision
+se pehle nahi hogi.
+
 ## Implemented file relationships
 
 None. Abhi sirf learning documentation hai.

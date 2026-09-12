@@ -36,3 +36,21 @@ gaya.
   sections, Topic 18 pointer, no code/package and clean `git diff --check` captured.
 - Prevention/interview lesson: missing test output ko pass mat bolo; smaller observable
   checks mein rerun karke evidence collect karo.
+
+## Topic 26 — Git global ignore access warning
+
+- Expected: `git status --short` repository changes show kare.
+- Actual: status ke saath user-level `.config/git/ignore` permission warning aayi.
+- Failing layer: user/global Git configuration access; TaskForge application nahi.
+- Impact: repository status printed, but global ignore rules incomplete ho sakti hain.
+- Safe response: no outside-workspace file/permission mutation; warning documented.
+- Verification: repository status and topic checks independently passed.
+
+## Topic 32 — TCP connection-table inspection denied
+
+- Expected: temporary loopback listener ko `Get-NetTCPConnection` se owner PID map kare.
+- Actual: cmdlet returned `Access denied`.
+- Failing layer: OS network-table inspection permission; listener startup nahi.
+- Safety: `finally` block listener stop karta raha; no permission escalation attempted.
+- Smallest fallback: same process loopback client connected and server accepted socket.
+- Verification: connection true/accepted true and listener inactive after cleanup.
