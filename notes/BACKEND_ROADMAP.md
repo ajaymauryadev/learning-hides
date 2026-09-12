@@ -51,9 +51,8 @@ progress ko track karti hai. Topics ko reorder ya skip nahi karna hai.
 
 **Phase 0 status: complete (17/17 topics locally verified).**
 
-Phase 0 ke baad ordered continuation Phase 1 mein hai. Current next topic:
-Phase 1 complete hai. Next ordered phase/topic: Phase 2, Topic 34 — Version control kya
-hai? It has not started.
+Phases 0–1 complete hain. Current next ordered topic Phase 2, Topic 35 — Git kya hai?
+It has not started.
 
 ## Phase 1 — Terminal, files aur development environment
 
@@ -87,6 +86,42 @@ hai? It has not started.
 
 ## Phase 2 — Git aur repository foundation
 
-Next ordered topic: **Topic 34 — Version control kya hai?** It has not started. Remaining
-Phase 2 topics stay defined in `TASKFORGE_BACKEND_MASTER_PLAN.md` and will be added to
-this active progress table when Phase 2 begins.
+| No. | Topic | Prerequisite | Practical outcome | Status |
+|---:|---|---|---|---|
+| 34 | Version control kya hai? | Phase 1 | Change-history, snapshot, collaboration and recovery mental model | complete |
+| 35 | Git kya hai? | Topic 34 | Git ko distributed VCS ke roop mein samajhna | complete |
+| 36 | Repository kya hai? | Topic 35 | Repository boundary and metadata mental model | complete |
+| 37 | Working tree | Topic 36 | Current filesystem state ka repository relation | complete |
+| 38 | Untracked file | Topic 37 | New unrecorded file state | complete |
+| 39 | Tracked file | Topic 38 | Version-controlled file state | complete |
+| 40 | Staging area | Topic 39 | Next record selection model | complete |
+| 41 | Commit | Topic 40 | Meaningful history-record model | complete |
+| 42 | Branch | Topic 41 | Parallel line of development | complete |
+| 43 | Remote repository | Topic 42 | Local/shared repository relationship | complete |
+| 44 | `git init` | Topics 34–43 | Intentional repository initialization | complete |
+| 45 | `git status` | Topic 44 | Repository state inspection | complete |
+| 46 | `.gitignore` | Topic 45 | Unwanted/unsecret files exclusion rules | complete |
+| 47 | `git add` | Topic 46 | Intended changes stage karna | complete |
+| 48 | `git diff` | Topic 47 | Unstaged differences inspect karna | planned |
+| 49 | `git diff --cached` | Topic 48 | Staged snapshot inspect karna | planned |
+| 50 | `git commit` | Topic 49 | Reviewed local history record create karna | planned |
+| 51 | `git log` | Topic 50 | History inspect karna | planned |
+| 52 | `git remote` | Topic 51 | Remote mappings inspect/configure karna | planned |
+| 53 | `git push` | Topic 52 | Local records remote par publish karna | planned |
+| 54 | `git pull` | Topic 53 | Remote changes safely integrate karna | planned |
+| 55 | Safe Git workflow | Topics 44–54 | Repeatable inspect-stage-review-record-sync flow | planned |
+| 56 | Secrets ko Git se bachana | Topic 55 | Secret prevention and incident response | planned |
+| 57 | Initial repository commit | Topic 56 | Reviewed initial TaskForge repository state | planned |
+
+### Phase 2 practical output
+
+- [ ] Intentional Git repository boundary
+- [ ] Safe `.gitignore`
+- [ ] TaskForge README
+- [ ] Reviewed initial commit
+- [ ] GitHub remote configured and verified
+- [ ] Topics 35–57 individually taught and verified
+
+**Phase 2 status: in progress (14/24 topics complete).**
+
+Next ordered topic: **Topic 48 — `git diff`.** It has not started.

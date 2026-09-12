@@ -1,0 +1,22 @@
+# npm ke install kiye hue dependencies ko Git history mein save nahi karna hai.
+node_modules/
+
+# Local environment secrets aur machine-specific values ko Git se bahar rakhna hai.
+.env
+.env.*
+
+# Safe environment-variable template ko team ke saath track karna allowed hai.
+!.env.example
+
+# Test coverage tools ka generated output source code nahi hota.
+coverage/
+
+# Future build process ka generated output dobara banaya ja sakta hai.
+dist/
+
+# Runtime aur npm debug log files generated/noisy ho sakti hain.
+*.log
+
+# macOS aur Windows ke generated filesystem metadata ko ignore karna hai.
+.DS_Store
+Thumbs.db

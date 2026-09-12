@@ -59,7 +59,21 @@ Chat memory par depend nahi karna. `BACKEND_ROADMAP.md` direction dega aur `LEAR
 - Phase 0 ke Topics 1–17 aur Phase 1 ke Topics 18–33 complete/locally verified hain.
 - Phase 1 practical output `taskforge-backend/` exact workspace child ke roop mein exists.
 - Folder empty hai, parent `Practicle` Git work tree ke andar hai, own `.git` nahi.
-- Current curriculum phase: Phase 1 — Terminal, files aur development environment.
-- Current topic lesson folder: `notes/topics/phase-1/`.
-- Next authorized learning step: **Phase 2, Topic 34 — Version control kya hai?**
-- Topic 34 tabhi start karna hai jab student next topic ke liye kahe.
+- Phase 2 Topic 34 complete: version-control mental model established; no Git mutation.
+- Phase 2 Topic 35 complete: Git distributed VCS mental model established; no mutation.
+- Phase 2 Topic 36 complete: current non-bare parent repository boundary verified.
+- Phase 2 Topic 37 complete: working-tree and three-state mental model established.
+- Phase 2 Topic 38 complete: untracked-file lifecycle and safety established.
+- Phase 2 Topic 39 complete: tracked-file identity and state dimensions established.
+- Phase 2 Topic 40 complete: staging/index proposed-snapshot model established.
+- Phase 2 Topic 41 complete: commit object/snapshot/history model established.
+- Phase 2 Topic 42 complete: branch/ref/HEAD and divergence model established.
+- Phase 2 Topic 43 complete: remote/upstream/cached-reference model established.
+- Phase 2 Topic 44 complete: safe repository initialization and nested-boundary model established.
+- Phase 2 Topic 45 complete: long/short/porcelain repository-status model established.
+- Phase 2 Topic 46 complete: TaskForge ignore rules and secret-prevention limits established.
+- Phase 2 Topic 47 complete: exact-path staging and content-snapshot timing established.
+- Current curriculum phase: Phase 2 — Git aur repository foundation.
+- Current topic lesson folder: `notes/topics/phase-2/`.
+- Next authorized learning step: **Phase 2, Topic 48 — `git diff`.**
+- Topic 48 tabhi start karna hai jab student next topic ke liye kahe.

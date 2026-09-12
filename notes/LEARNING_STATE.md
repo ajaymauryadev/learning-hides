@@ -9,11 +9,12 @@
 
 ## Current position
 
-- Current phase: Phase 1 — complete
-- Last completed topic: Topic 33 — Project root folder create karna
-- Next topic: Phase 2, Topic 34 — Version control kya hai?
+- Current phase: Phase 2 — Git aur repository foundation
+- Last completed topic: Topic 47 — `git add`
+- Next topic: Topic 48 — `git diff`
 - Phase 0 progress: 17/17 topics complete
 - Phase 1 progress: 16/16 topics complete
+- Phase 2 progress: 14/24 topics complete
 
 ## Topic 1 learning record
 
@@ -1983,6 +1984,716 @@ Student ko root distinctions and safe creation/verification algorithm explain ka
 ### Next topic
 
 Phase 2, Topic 34 — Version control kya hai? Abhi start nahi hua.
+
+## Topic 34 learning record
+
+### Topic completed
+
+Topic 34 — Version control kya hai?
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/034-version-control.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. No repository command/mutation performed.
+
+### Concepts introduced
+
+- Version control and project versions
+- structured history and snapshot mental model
+- comparison, attribution, recovery, parallel work and review
+- atomic/coherent change records
+- version control versus backup/autosave/database audit
+- conflicts, recovery/security limitations
+- repository-boundary risk in current nested folder layout
+
+### Data/control flow
+
+```text
+known state -> scoped change -> verify -> diff review -> meaningful record -> share later
+```
+
+### Verification performed
+
+- Parent working tree was clean and latest Phase 1 commit identified.
+- `taskforge-backend/` remains empty, inside parent Git work tree, without own `.git`.
+- No init/stage/commit/remote/push/pull action executed.
+- Lesson includes diagram, errors, exercise and easy-English answers.
+
+### Errors solved
+
+No runtime error. Accidental nested repository risk identified and deferred to ordered
+repository topics.
+
+### Revision required
+
+Student ko version control versus backup, snapshot flow and limitations explain karne hain.
+
+### Next topic
+
+Topic 35 — Git kya hai? Abhi start nahi hua.
+
+## Topic 35 learning record
+
+### Topic completed
+
+Topic 35 — Git kya hai?
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/035-what-is-git.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Git installation/repository state unchanged.
+
+### Concepts introduced
+
+- Git as specific distributed version control system
+- Git versus GitHub and centralized versus distributed overview
+- working tree, staging, local repository and remote conceptual areas
+- content-addressed objects, snapshots and commit graph overview
+- local versus remote operations
+- Git capabilities and correctness/security/backup limitations
+- multiple configs, hooks and line-ending context
+
+### Data/control flow
+
+```text
+working files -> selected snapshot -> local history -> optional remote exchange
+```
+
+### Verification performed
+
+- Git identity, selected executable, work-tree status, top-level, git-dir and current
+  branch inspected read-only.
+- child folder confirmed under parent root with no own `.git`.
+- no repository/index/commit/branch/remote mutation.
+
+### Errors solved
+
+No new runtime error. Existing global-ignore and line-ending warnings classified as
+configuration/context, not Git identity failure.
+
+### Revision required
+
+Student ko Git/version-control/GitHub distinctions and four conceptual areas explain karne
+hain.
+
+### Next topic
+
+Topic 36 — Repository kya hai? Abhi start nahi hua.
+
+## Topic 36 learning record
+
+### Topic completed
+
+Topic 36 — Repository kya hai?
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/036-what-is-a-repository.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Repository structure/state unchanged.
+
+### Concepts introduced
+
+- folder/project/repository boundaries
+- `.git`, common Git directory and top-level
+- upward repository discovery and relative prefix
+- inside-work-tree versus inside-git-dir
+- bare versus non-bare repository
+- local/remote, init/clone and nested repository overviews
+- one-repo/multiple-project boundary tradeoffs
+
+### Data/control flow
+
+```text
+CWD -> upward .git discovery -> repository root/metadata context
+```
+
+### Verification performed
+
+- parent top-level, git-dir/common-dir, work-tree and non-bare state inspected.
+- child prefix `taskforge-backend/`, same parent root, no own `.git` confirmed.
+- no init/stage/commit/config/remote mutation.
+
+### Errors solved
+
+No error. Relative versus absolute git-dir output and parent discovery clarified.
+
+### Revision required
+
+Student ko project/repository/bare/nested distinctions and current boundary explain karni
+hai.
+
+### Next topic
+
+Topic 37 — Working tree. Abhi start nahi hua.
+
+## Topic 37 learning record
+
+### Topic completed
+
+Topic 37 — Working tree
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/037-working-tree.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Git working/index/history state intentionally not mutated beyond documentation edits.
+
+### Concepts introduced
+
+- working tree versus CWD/workspace/repository
+- HEAD/index/working-tree three-state model
+- clean and dirty working state
+- disk state versus unsaved editor buffer
+- modified/new/deleted/renamed/type-change overview
+- empty/ignored item and line-ending nuances
+- dirty-work preservation
+
+### Data/control flow
+
+```text
+recorded snapshot -> checked-out working files -> developer edits -> inspected differences
+```
+
+### Verification performed
+
+- non-bare parent working tree/top-level and `HEAD` inspected.
+- baseline: four modified tracked paths, zero staged, three untracked notes, ignored count
+  zero with existing global-ignore warning context.
+- no stage/restore/reset/checkout/commit performed.
+
+### Errors solved
+
+No new error. Git working-tree concept versus shell working directory clarified.
+
+### Revision required
+
+Student ko three-state model and clean/dirty evidence limits explain karne hain.
+
+### Next topic
+
+Topic 38 — Untracked file. Abhi start nahi hua.
+
+## Topic 38 learning record
+
+### Topic completed
+
+Topic 38 — Untracked file
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/038-untracked-file.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. No Git tracking state mutation.
+
+### Concepts introduced
+
+- untracked definition and `??` marker
+- collapsed directory versus exact untracked paths
+- untracked versus tracked-modified/ignored/unstaged
+- track/ignore/remove decision lifecycle
+- Git recovery limits and `git clean` risk
+- broad staging and secret exposure risk
+- expected negative tracking probe
+
+### Data/control flow
+
+```text
+new disk file -> untracked -> inspect -> later track, ignore or safely remove
+```
+
+### Verification performed
+
+- four Topic 34–37 notes untracked at baseline; ignored count zero.
+- tracked-file lookup for Topic 34 returned expected exit `1`.
+- Topic 38 note adds fifth untracked file.
+- no stage/ignore/delete/clean/commit performed.
+
+### Errors solved
+
+Expected `--error-unmatch` diagnostic explained as negative evidence, not unexpected failure.
+
+### Revision required
+
+Student ko untracked/ignored/modified states and safe decision flow explain karna hai.
+
+### Next topic
+
+Topic 39 — Tracked file. Abhi start nahi hua.
+
+## Topic 39 learning record
+
+### Topic completed
+
+Topic 39 — Tracked file
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/039-tracked-file.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. No Git tracking/index/history mutation.
+
+### Concepts introduced
+
+- tracked identity as index-known path
+- tracked versus committed/modified/staged/ignored
+- possible tracked-file state combinations
+- index entry mode/object/stage/path overview
+- stop tracking versus disk deletion
+- history, mode and rename nuances
+- tracked secret/generated-file policy
+
+### Data/control flow
+
+```text
+index-known path -> compare working tree/index/HEAD -> current tracked state
+```
+
+### Verification performed
+
+- roadmap tracked query returned path and exit `0`.
+- index entry and HEAD path present.
+- working diff present, staged diff absent: tracked + modified + unstaged.
+- latest recorded path commit `1f39efa` identified.
+- no add/remove/restore/commit action.
+
+### Errors solved
+
+No error. “Tracked means current content committed” misconception resolved with evidence.
+
+### Revision required
+
+Student ko one file ke tracking/change dimensions and three-state comparisons explain
+karne hain.
+
+### Next topic
+
+Topic 40 — Staging area. Abhi start nahi hua.
+
+## Topic 40 learning record
+
+### Topic completed
+
+Topic 40 — Staging area
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/040-staging-area.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Git index intentionally not changed.
+
+### Concepts introduced
+
+- staging area/index as proposed next-commit snapshot
+- no staged differences versus non-empty index
+- HEAD/index/working-tree comparisons
+- staging copies/selects content, not file move
+- stage versus commit/push
+- stage-then-edit and partial staging
+- addition/deletion/rename/conflict index overview
+- staged secret/generated-file safety
+
+### Data/control flow
+
+```text
+working content -> select into index -> review candidate -> commit later
+```
+
+### Verification performed
+
+- staged names/status counts zero.
+- index contains 48 tracked entries.
+- roadmap index entry inspected; working modifications remain four.
+- no add/unstage/restore/commit performed.
+
+### Errors solved
+
+No error. “No staged changes means index empty” misconception resolved.
+
+### Revision required
+
+Student ko three states, 48-vs-0 evidence and stage-then-edit scenario explain karne hain.
+
+### Next topic
+
+Topic 41 — Commit. Abhi start nahi hua.
+
+## Topic 41 learning record
+
+### Topic completed
+
+Topic 41 — Commit
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/041-commit.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. No commit/history mutation.
+
+### Concepts introduced
+
+- commit object and snapshot-not-diff model
+- tree/blob/parent/commit graph overview
+- full/short content-derived commit identity
+- author versus committer
+- save/stage/commit/push/deploy separation
+- immutable-object/history-rewrite model
+- atomic commit and secret/privacy risks
+
+### Data/control flow
+
+```text
+index snapshot -> commit object(tree + parents + metadata + message) -> local history
+```
+
+### Verification performed
+
+- current `HEAD` full/short identity and object type inspected.
+- tree, one parent, subject and dates inspected; personal email not copied into notes.
+- no staging/commit/amend/history change.
+
+### Errors solved
+
+No error. Commit-as-diff and commit-as-push misconceptions clarified.
+
+### Revision required
+
+Student ko commit anatomy, snapshot comparison and action boundaries explain karne hain.
+
+### Next topic
+
+Topic 42 — Branch. Abhi start nahi hua.
+
+## Topic 42 learning record
+
+### Topic completed
+
+Topic 42 — Branch
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/042-branch.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Branch/reference state unchanged.
+
+### Concepts introduced
+
+- branch as named movable commit reference
+- attached HEAD and full local ref namespace
+- pointer advancement and divergence
+- branch creation versus folder copy
+- dirty working-tree switch behavior
+- detached HEAD
+- merge/fast-forward/rebase/conflict overview
+- local versus remote-tracking branch preview
+
+### Data/control flow
+
+```text
+HEAD -> current branch ref -> commit; new commit -> current ref moves
+```
+
+### Verification performed
+
+- current/local branch `main`, full ref `refs/heads/main`.
+- HEAD and main both resolve `1f39efa...`.
+- exactly one local branch observed.
+- no branch/create/switch/merge/rebase/delete/rename mutation.
+
+### Errors solved
+
+No error. Branch-as-folder-copy and commit-updates-all-branches misconceptions resolved.
+
+### Revision required
+
+Student ko branch/HEAD graph and dirty-switch/integration risks explain karne hain.
+
+### Next topic
+
+Topic 43 — Remote repository. Abhi start nahi hua.
+
+## Topic 43 learning record
+
+### Topic completed
+
+Topic 43 — Remote repository
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/043-remote-repository.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Remote configuration/state not mutated.
+
+### Concepts introduced
+
+- remote repository versus local remote config
+- remote name and fetch/push URLs
+- local branch, remote-tracking ref and actual remote branch
+- upstream tracking and cached ahead/behind
+- fetch/pull/push/clone overviews
+- authentication versus authorization/network policy
+- divergence/force-push and multiple-remote risks
+- current parent-remote versus TaskForge project boundary
+
+### Data/control flow
+
+```text
+local repository <-> explicit network operations <-> remote repository
+```
+
+### Verification performed
+
+- one `origin` with same GitHub fetch/push URL.
+- local main upstream `origin/main`.
+- both local refs at `1f39efa...`; cached ahead/behind `0/0`.
+- no network call or remote/config mutation.
+
+### Errors solved
+
+No error. Cached remote-tracking ref versus live remote distinction clarified.
+
+### Revision required
+
+Student ko three branch/ref layers and fetch/pull/push differences explain karne hain.
+
+### Next topic
+
+Topic 44 — `git init`. Abhi start nahi hua.
+
+## Topic 44 learning record
+
+### Topic completed
+
+Topic 44 — `git init`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/044-git-init.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Real project repository boundary not mutated.
+
+### Concepts introduced
+
+- repository initialization and `.git` metadata
+- unborn branch and explicit initial branch
+- bare versus non-bare repository
+- init versus clone
+- repository discovery from child folders
+- re-initialization and accidental nested-repository risk
+- safe pre-init verification
+
+### Data/control flow
+
+```text
+terminal -> Git process -> folder -> local .git metadata
+```
+
+### Verification performed
+
+- isolated unique temporary folder initialized with branch `main`.
+- temporary repository reported working-tree true and zero commits.
+- verification repository OS temporary location mein bana; workspace mein test folder nahi bana.
+- existing parent HEAD/staging/remote and empty child folder unchanged.
+
+### Errors solved
+
+No project error. PowerShell revision quoting issue from prior verification was corrected;
+common init/path/nesting errors documented.
+
+### Revision required
+
+Student ko init versus commit/clone and parent versus nested boundary explain karni hai.
+
+### Next topic
+
+Topic 45 — `git status`. Abhi start nahi hua.
+
+## Topic 45 learning record
+
+### Topic completed
+
+Topic 45 — `git status`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/045-git-status.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. Repository content state not staged or committed.
+
+### Concepts introduced
+
+- long, short, branch and porcelain status formats
+- `XY` index/working-tree columns
+- staged, unstaged, untracked and ignored categories
+- collapsed untracked-directory display
+- clean-state limitations and cached upstream summary
+- status versus diff responsibility
+
+### Data/control flow
+
+```text
+HEAD + index + working tree -> local comparisons -> status report
+```
+
+### Verification performed
+
+- current branch `main` and cached upstream `origin/main` observed.
+- initial state: 4 modified tracked unstaged files, 0 staged, 11 individual untracked files.
+- ignored entry count zero at verification start.
+- normal, short, short-with-branch and porcelain v1 outputs inspected.
+- no add/commit/restore/delete/network command performed.
+
+### Errors solved
+
+No project error. `XY` spacing, collapsed-directory and cached-upstream misconceptions documented.
+
+### Revision required
+
+Student ko ` M`, `M `, `MM`, `??`, `!!` aur clean-state limits explain karne hain.
+
+### Next topic
+
+Topic 46 — `.gitignore`. Abhi start nahi hua.
+
+## Topic 46 learning record
+
+### Topic completed
+
+Topic 46 — `.gitignore`
+
+### Files created/modified
+
+- Created `taskforge-backend/.gitignore`
+- Created `notes/topics/phase-2/046-gitignore.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None. No real `.env`, dependency or generated-output test file created.
+
+### Concepts introduced
+
+- ignore patterns, directory patterns, wildcards, comments and negation
+- repository, local and global ignore-rule sources
+- ignored versus untracked versus tracked states
+- `git check-ignore -v --no-index` diagnosis
+- generated files versus manifest/lockfile policy
+- ignore rules as prevention, not committed-secret remediation
+
+### Data/control flow
+
+```text
+path + applicable ordered patterns -> ignored or visible-untracked classification
+```
+
+### Verification performed
+
+- representative secret/generated hypothetical paths matched intended rules.
+- `.env.example`, source and lockfile paths verified non-ignored.
+- `.gitignore` itself visible to parent repository and child has no own `.git`.
+- no add/commit/delete/network operation performed.
+
+### Errors solved
+
+No project error. Tracked-file, negation-order and committed-secret misconceptions documented.
+
+### Revision required
+
+Student ko rule scope, negation, check-ignore and tracked-file limitation explain karni hai.
+
+### Next topic
+
+Topic 47 — `git add`. Abhi start nahi hua.
+
+## Topic 47 learning record
+
+### Topic completed
+
+Topic 47 — `git add`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/047-git-add.md`
+- Updated roadmap, learning state, architecture and durable memory
+- Staged only `taskforge-backend/.gitignore`; its working content was not changed in this topic
+
+### Packages installed
+
+None.
+
+### Concepts introduced
+
+- selected content copy from working tree to index
+- exact path, `--`, directory, dot, `-A` and patch-selection scopes
+- content snapshot timing and re-staging after later edits
+- addition/modification/deletion index updates
+- ignored-file and force-add safety boundary
+- unstage versus work-tree discard distinction
+
+### Data/control flow
+
+```text
+reviewed work-tree path -> git add -> index proposed snapshot
+```
+
+### Verification performed
+
+- baseline staged count zero.
+- exact `.gitignore` path existed and was not ignored.
+- only `taskforge-backend/.gitignore` became staged as a new file.
+- ordinary path diff empty while cached path diff contained its complete content.
+- HEAD remained unchanged; no commit or network operation performed.
+
+### Errors solved
+
+No project error. Broad pathspec, snapshot timing, force-add and add-versus-commit misconceptions
+documented.
+
+### Revision required
+
+Student ko exact-path add, index destination and later-edit behavior explain karna hai.
+
+### Next topic
+
+Topic 48 — `git diff`. Abhi start nahi hua.
 
 ## Phase 1 completion record
 

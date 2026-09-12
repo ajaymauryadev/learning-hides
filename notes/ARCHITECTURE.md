@@ -336,6 +336,152 @@ C:\Users\ajaym\Desktop\Practicle\       <- current Git/repository root
 `package.json` nahi. Nested repository initialization Phase 2 concepts/boundary decision
 se pehle nahi hogi.
 
+## Version-control responsibility
+
+```text
+working project state
+  -> scoped verified change
+  -> reviewed history record
+  -> optional shared remote later
+```
+
+Version control source/tests/docs history manage karega; production database backups,
+business audit logs and secret storage separate architecture responsibilities hain.
+
+Git conceptual flow:
+
+```text
+working tree -> staging/index -> local repository history <-> optional remote repository
+```
+
+Current `taskforge-backend/` parent `Practicle` Git context inherit karta hai; repository
+boundary Topic 36 onward explicitly reason hogi.
+
+Verified repository boundary:
+
+```text
+Practicle/                    <- non-bare Git top-level
+  .git/                       <- local repository metadata/history
+  taskforge-backend/          <- child project prefix; no own .git
+```
+
+Folder, project and Git repository roots are treated as separate concepts even when a
+future layout chooses to align them.
+
+Working-state model:
+
+```text
+HEAD snapshot <-> staging/index <-> working tree files on disk
+```
+
+VS Code buffers and running processes are additional states; saved working-tree content
+does not automatically mean committed history or reloaded runtime behavior.
+
+Untracked-file decision boundary:
+
+```text
+new file on disk -> inspect content/responsibility -> track later | ignore | safely remove
+```
+
+Untracked content is not recoverable from Git history unless it becomes part of a recorded
+snapshot; secrets must be excluded before staging.
+
+Tracked-file state model:
+
+```text
+index knows path -> tracked
+working tree differs from index -> modified
+index differs from HEAD -> staged
+```
+
+These dimensions can coexist; tracking does not mean current content is committed.
+
+Staging boundary:
+
+```text
+working tree current content -> index proposed snapshot -> commit history record
+```
+
+Index can differ from both HEAD and working files; staged and unstaged diffs need separate
+review before any history record.
+
+Commit-object model:
+
+```text
+commit -> root tree snapshot + parent commit(s) + author/committer/message metadata
+```
+
+Commit records the index locally; remote sharing and deployment remain separate transitions.
+
+Branch reference model:
+
+```text
+HEAD -> refs/heads/<current-branch> -> commit -> parent history
+```
+
+Branches are movable references, not project-folder copies; current dirty working state
+must be preserved before any checkout/integration operation.
+
+Remote-history model:
+
+```text
+local main <-> local cached origin/main <-> actual remote main
+```
+
+Remote-tracking refs are updated by network synchronization, not live views. Existing
+`origin` belongs to parent `learning-hides` repository; final TaskForge boundary remains an
+intentional Phase 2 decision.
+
+Repository-initialization boundary:
+
+```text
+Practicle/.git/            -> current existing parent repository metadata
+Practicle/taskforge-backend/ -> covered child; no own .git metadata
+```
+
+`git init` creates local repository metadata, not application code, commits or a remote.
+An isolated temporary init verified the command while the real child remained empty and
+non-nested. Independent TaskForge repository creation remains an explicit later boundary
+decision, not an accidental tutorial side effect.
+
+Repository-status observation model:
+
+```text
+HEAD vs index       -> staged status column
+index vs work tree  -> unstaged status column
+unknown paths       -> untracked status
+ignore rules        -> normally hidden paths
+```
+
+`git status` summarizes local repository state without making an application, commit or remote
+transition. Its upstream summary uses locally cached remote-tracking information, not a live
+server query.
+
+TaskForge ignore boundary:
+
+```text
+taskforge-backend/.gitignore
+  -> ignores dependencies, local environment files, generated output and logs
+  -> explicitly allows .env.example
+  -> does not ignore source files, package manifests or lockfiles
+```
+
+Ignore rules classify untracked paths; they do not erase tracked history or replace credential
+rotation. The file belongs to the parent repository working tree while the TaskForge child has no
+independent `.git` directory.
+
+Staging transition applied to TaskForge policy:
+
+```text
+taskforge-backend/.gitignore (reviewed working content)
+  -> git add -- exact path
+  -> index contains proposed new-file snapshot
+  -> HEAD/history remains unchanged until commit
+```
+
+Only the exact policy file was selected. Broad directory/repository staging was avoided while
+other accumulated learning documents remain unstaged for separate review.
+
 ## Implemented file relationships
 
 None. Abhi sirf learning documentation hai.
