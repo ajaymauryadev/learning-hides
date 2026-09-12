@@ -56,8 +56,8 @@ Chat memory par depend nahi karna. `BACKEND_ROADMAP.md` direction dega aur `LEAR
 
 - Master plan read and saved.
 - TaskForge application abhi initialize nahi hui hai.
-- Topics 1–8 complete aur locally verified hain.
+- Phase 0 ke Topics 1–17 complete aur locally verified hain.
 - Current curriculum phase: Phase 0 — Software aur backend ka mental model.
 - Topic lesson folder: `notes/topics/phase-0/`.
-- Next authorized learning step: **Topic 9 — Source code aur running process ka difference**.
-- Topic 9 tabhi start karna hai jab student next topic ke liye kahe.
+- Next authorized learning step: **Phase 1, Topic 18 — Terminal kya hai?**
+- Topic 18 tabhi start karna hai jab student next topic ke liye kahe.

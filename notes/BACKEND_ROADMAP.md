@@ -31,15 +31,15 @@ progress ko track karti hai. Topics ko reorder ya skip nahi karna hai.
 | 6 | API kya hai? | Topics 1–5 | Software communication contract ka mental model | complete |
 | 7 | Request aur response kya hain? | Topic 6 | Basic communication flow | complete |
 | 8 | Runtime kya hota hai? | Topics 1–7 | Code execution environment ka mental model | complete |
-| 9 | Source code aur running process ka difference | Topic 8 | File aur active program ka difference | planned |
-| 10 | Local development aur production ka difference | Topics 8–9 | Environments ka basic distinction | planned |
-| 11 | TaskForge product overview | Topics 1–10 | Product scope ka detailed overview | planned |
-| 12 | TaskForge ke users | Topic 11 | User types ka definition | planned |
-| 13 | Primary use cases | Topics 11–12 | Main user goals/actions | planned |
-| 14 | High-level system diagram | Topics 2–13 | Initial system relationships | planned |
-| 15 | Initial development phases | Topics 1–14 | Implementation sequence ka overview | planned |
-| 16 | Definition of Done | Topic 15 | Completion criteria | planned |
-| 17 | Learning documentation system | Topics 1–16 | Durable learning workflow | planned |
+| 9 | Source code aur running process ka difference | Topic 8 | File aur active program ka difference | complete |
+| 10 | Local development aur production ka difference | Topics 8–9 | Environments ka basic distinction | complete |
+| 11 | TaskForge product overview | Topics 1–10 | Product scope ka detailed overview | complete |
+| 12 | TaskForge ke users | Topic 11 | User types ka definition | complete |
+| 13 | Primary use cases | Topics 11–12 | Main user goals/actions | complete |
+| 14 | High-level system diagram | Topics 2–13 | Initial system relationships | complete |
+| 15 | Initial development phases | Topics 1–14 | Implementation sequence ka overview | complete |
+| 16 | Definition of Done | Topic 15 | Completion criteria | complete |
+| 17 | Learning documentation system | Topics 1–16 | Durable learning workflow | complete |
 
 ### Phase 0 practical output
 
@@ -47,4 +47,8 @@ progress ko track karti hai. Topics ko reorder ya skip nahi karna hai.
 - [x] Backend roadmap/progress tracker initialized
 - [x] Honest current architecture document initialized
 - [x] Learning-state document initialized
-- [ ] Topics 9–17 individually taught and verified
+- [x] Topic 17 individually taught and verified
+
+**Phase 0 status: complete (17/17 topics locally verified).**
+
+Next ordered phase/topic: Phase 1, Topic 18 — Terminal kya hai? It has not started.

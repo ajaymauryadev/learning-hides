@@ -9,10 +9,10 @@
 
 ## Current position
 
-- Current phase: Phase 0 — Software aur backend ka mental model
-- Last completed topic: Topic 8 — Runtime kya hota hai?
-- Next topic: Topic 9 — Source code aur running process ka difference
-- Phase 0 progress: 8/17 topics complete
+- Current phase: Phase 0 — complete
+- Last completed topic: Topic 17 — Learning documentation system
+- Next topic: Phase 1, Topic 18 — Terminal kya hai?
+- Phase 0 progress: 17/17 topics complete
 
 ## Topic 1 learning record
 
@@ -533,4 +533,585 @@ ek example apne words mein explain karna hai.
 
 ### Next topic
 
-Topic 9 — Source code aur running process ka difference. Abhi teach nahi kiya gaya.
+Topic 8 complete hone ke samay next topic Topic 9 tha; woh ab complete ho chuka hai.
+
+## Topic 9 learning record
+
+### Topic completed
+
+Topic 9 — Source code aur running process ka difference
+
+### Files created/modified
+
+- Created `notes/topics/phase-0/009-source-code-vs-running-process.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh conceptual topic hai; TaskForge source/application process abhi create nahi
+hua.
+
+### Concepts introduced
+
+- Source code as stored instructions
+- Process as active operating-system-managed program instance
+- Runtime executing source instructions
+- Process memory, PID, environment and open resources
+- Process lifecycle: start, run, stop/crash
+- Same source code se multiple process instances
+- File save aur running behaviour update ka difference
+- Restart/reload aur stale process ka introductory debugging idea
+
+### Data/control flow
+
+```text
+Source-code files on disk
+  -> runtime ko start command
+  -> operating system running process create/manage karta hai
+  -> process memory/resources use karke behaviour perform karta hai
+  -> stop/crash par process ends; source files disk par remain karte hain
+```
+
+Local-development aur production environments Topic 10 mein aayenge.
+
+### Verification performed
+
+- Definition, recipe/chef analogy, lifecycle, process state, multiple instances,
+  edit/save/restart behaviour, crash distinction, stale-process example, exercise aur
+  easy-English interview answer verify kiye gaye.
+- Exactly Topics 1–9 complete aur Topic 10 planned verify hua.
+- Architecture current truth still says no TaskForge source/runtime process exists.
+- No code/process/package/startup test applicable tha.
+
+### Errors solved
+
+Koi meaningful error nahi aaya.
+
+### Revision required
+
+Student ko explain karna hai ki source file edit karne par already-running process
+automatically new behaviour kyun na dikhaye, aur restart/reload kya role play karta hai.
+
+### Next topic
+
+Topic 9 complete hone ke samay next topic Topic 10 tha; woh ab complete ho chuka hai.
+
+## Topic 10 learning record
+
+### Topic completed
+
+Topic 10 — Local development aur production ka difference
+
+### Files created/modified
+
+- Created `notes/topics/phase-0/010-local-development-vs-production.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh conceptual topic hai; environment configuration ya deployment abhi create
+nahi hua.
+
+### Concepts introduced
+
+- Environment as application-running context
+- Local development environment
+- Production environment
+- Real users/data/business impact
+- Same codebase with environment-specific configuration
+- Development convenience versus production safety
+- Secrets, logging, error details and test-data boundaries
+- Environment parity and deployment/promotion ka introductory idea
+
+### Data/control flow
+
+```text
+Developer edits/tests code in local development
+  -> changes verified and versioned
+  -> controlled deployment process
+  -> production process serves real users with production configuration/data
+```
+
+Exact configuration, testing, Git and deployment mechanisms later ordered topics
+mein aayenge.
+
+### Verification performed
+
+- Definitions, comparison table, TaskForge examples, configuration/secrets/logging
+  boundaries, safe change flow, misconceptions, exercise aur easy-English interview
+  answer verify kiye gaye.
+- Exactly Topics 1–10 complete aur Topic 11 planned verify hua.
+- Architecture current no-code truth ke saath conceptual environment section add hua.
+- Git worktree changes inspect hue aur unrelated/existing changes preserve kiye gaye.
+- Application startup, deployment aur automated tests applicable nahi the.
+
+### Errors solved
+
+Koi meaningful application error nahi aaya.
+
+### Revision required
+
+Student ko same TaskForge feature ke local-development aur production impact/data/
+error-handling differences explain karne hain.
+
+### Next topic
+
+Topic 10 complete hone ke samay next topic Topic 11 tha; woh ab complete ho chuka hai.
+
+## Topic 11 learning record
+
+### Topic completed
+
+Topic 11 — TaskForge product overview
+
+### Files created/modified
+
+- Created `notes/PRODUCT_DEFINITION.md`
+- Created `notes/topics/phase-0/011-taskforge-product-overview.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh product-definition topic hai; application code abhi create nahi hua.
+
+### Concepts introduced
+
+- Product problem, purpose and value
+- Learning-first, portfolio-second positioning
+- Product scope and capability groups
+- Functional versus engineering capabilities ka basic distinction
+- Backend-first delivery approach
+- Product boundary and non-goals
+- Incremental evolution and evidence-based completion
+- Planned capability versus implemented capability
+
+### Data/control flow
+
+```text
+Team work-management need
+  -> TaskForge supported product capability
+  -> client/API/backend/database conceptual flow
+  -> organized, controlled and traceable work result
+```
+
+Exact users Topic 12 aur primary use cases Topic 13 mein define honge.
+
+### Verification performed
+
+- Product name, problem, purpose, value, scope groups, learning goals, non-goals,
+  backend-first approach, success qualities and current implementation truth verify
+  kiye gaye.
+- Exactly Topics 1–11 complete aur Topic 12 planned verify hua.
+- `PRODUCT_DEFINITION.md` canonical product reference ke roop mein create hua.
+- Architecture product boundary ke saath sync hui without claiming code exists.
+- Package, application code, endpoint aur automated tests applicable nahi the.
+
+### Errors solved
+
+Koi meaningful error nahi aaya.
+
+### Revision required
+
+Student ko TaskForge ko 30–45 seconds mein problem, solution, major capabilities aur
+learning purpose ke saath explain karna hai.
+
+### Next topic
+
+Topic 11 complete hone ke samay next topic Topic 12 tha; woh ab complete ho chuka hai.
+
+## Topic 12 learning record
+
+### Topic completed
+
+Topic 12 — TaskForge ke users
+
+### Files created/modified
+
+- Created `notes/USERS_AND_ROLES.md`
+- Created `notes/topics/phase-0/012-taskforge-users.md`
+- Updated `notes/PRODUCT_DEFINITION.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh domain-analysis topic hai; authentication/authorization code abhi create
+nahi hua.
+
+### Concepts introduced
+
+- User/account versus role
+- Registered/normal platform user
+- Workspace owner, admin and member roles
+- System administrator
+- Workspace-scoped authority
+- Same user having different roles in different workspaces
+- Least privilege and default deny ka introductory idea
+- Authentication versus authorization recap
+
+### Data/control flow
+
+```text
+Authenticated user attempts operation in workspace/resource context
+  -> system identifies relevant membership/role
+  -> required permission and ownership rules evaluated
+  -> allow safe operation or return controlled denial
+```
+
+Exact primary use cases Topic 13 aur authorization implementation Phase 21 mein
+aayegi.
+
+### Verification performed
+
+- All specified user categories, scope distinctions, capability matrix, multi-role
+  example, security boundaries, exercise aur easy-English answer verify kiye gaye.
+- Exactly Topics 1–12 complete aur Topic 13 planned verify hua.
+- Product and architecture documents user/role boundary ke saath sync hue.
+- No user schema, role enum, authentication/API/database code invent kiya gaya.
+
+### Errors solved
+
+Koi meaningful error nahi aaya.
+
+### Revision required
+
+Student ko workspace owner, workspace admin aur system administrator ke scope ka
+difference aur same account ke multi-workspace roles explain karne hain.
+
+### Next topic
+
+Topic 12 complete hone ke samay next topic Topic 13 tha; woh ab complete ho chuka hai.
+
+## Topic 13 learning record
+
+### Topic completed
+
+Topic 13 — Primary use cases
+
+### Files created/modified
+
+- Created `notes/USE_CASES.md`
+- Created `notes/topics/phase-0/013-primary-use-cases.md`
+- Updated `notes/PRODUCT_DEFINITION.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh product/domain-analysis topic hai; use-case code/API abhi create nahi hua.
+
+### Concepts introduced
+
+- Use case as actor goal and observable outcome
+- Actor, trigger, precondition, main flow, alternative/failure flow, postcondition
+- Feature versus use case
+- Happy path versus failure path
+- Primary versus supporting use cases
+- Side effect and unchanged-on-failure expectation
+- TaskForge identity, workspace, project, task, collaboration and operations use cases
+
+### Data/control flow
+
+```text
+Actor goal/trigger
+  -> system validates identity, context, input and rules
+  -> allowed state/data operation
+  -> observable success outcome
+or
+  -> controlled failure with unsafe side effects prevented
+```
+
+High-level component relationship diagram Topic 14 mein aayega.
+
+### Verification performed
+
+- Use-case definition/template, primary catalog, complete create-task example,
+  success/failure/side-effect boundaries, misconceptions, exercise and easy-English
+  interview answer verify kiye gaye.
+- Exactly Topics 1–13 complete aur Topic 14 planned verify hua.
+- Product and architecture documents use-case view ke saath sync hue.
+- No HTTP method, URL, schema, controller/service/model or test invented hua.
+
+### Errors solved
+
+Koi meaningful error nahi aaya.
+
+### Revision required
+
+Student ko actor, trigger, precondition, main flow, failure flow and postcondition ke
+saath ek TaskForge use case independently describe karna hai.
+
+### Next topic
+
+Topic 13 complete hone ke samay next topic Topic 14 tha; woh ab complete ho chuka hai.
+
+## Topic 14 learning record
+
+### Topic completed
+
+Topic 14 — High-level system diagram
+
+### Files created/modified
+
+- Created `notes/SYSTEM_DIAGRAM.md`
+- Created `notes/topics/phase-0/014-high-level-system-diagram.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Mermaid diagrams Markdown documentation mein hain; application component/code
+abhi create nahi hua.
+
+### Concepts introduced
+
+- System boundary
+- Actor, client, API boundary, backend, database and external-service relationships
+- Component responsibility versus implementation detail
+- Forward request and reverse response/error flow
+- Trust boundary and backend enforcement
+- Planned architecture versus current implemented architecture
+- High-level diagram versus detailed code/layer diagram
+
+### Data/control flow
+
+```text
+Actor -> client -> API boundary -> backend -> database/external service
+Actor <- client <- response    <- backend <- result/error
+```
+
+Initial development sequence Topic 15 mein define hogi.
+
+### Verification performed
+
+- Canonical Mermaid context and request-flow diagrams created and structurally
+  checked for matching nodes/edges and valid fenced blocks.
+- Actors, client, API, modular backend, database and optional external services are
+  present with planned-status labels.
+- Exactly Topics 1–14 complete aur Topic 15 planned verify hua.
+- Architecture distinguishes conceptual target from current no-code truth.
+- No application component, package, endpoint or database created.
+
+### Errors solved
+
+Koi meaningful error nahi aaya.
+
+### Revision required
+
+Student ko diagram left-to-right explain karke request ka forward path aur result/error
+ka reverse path independently trace karna hai.
+
+### Next topic
+
+Topic 14 complete hone ke samay next topic Topic 15 tha; woh ab complete ho chuka hai.
+
+## Topic 15 learning record
+
+### Topic completed
+
+Topic 15 — Initial development phases
+
+### Files created/modified
+
+- Created `notes/DEVELOPMENT_PHASES.md`
+- Created `notes/topics/phase-0/015-initial-development-phases.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `notes/DEBUG_LOG.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh planning/sequence topic hai; future phase implementation abhi start nahi hui.
+
+### Concepts introduced
+
+- Dependency-based learning/development sequence
+- Foundation before framework
+- Milestone and exit evidence
+- Concept phase versus implementation phase
+- Vertical slice as end-to-end thin feature
+- Incremental capability growth
+- Advanced tools only after justified need
+
+### Data/control flow
+
+```text
+Mental model -> environment -> Git -> JavaScript -> Node -> npm -> HTTP -> Express
+-> configuration -> database -> models -> architecture -> first vertical slice
+```
+
+### Verification performed
+
+- Initial Phase 0–14 sequence, purpose, dependency and milestones verify kiye gaye.
+- Exactly Topics 1–15 complete aur Topic 16 planned verify hua.
+- Sequence official roadmap order se match karti hai; future status unchanged hain.
+- No source, package, runtime process, endpoint or database created.
+
+### Errors solved
+
+Initial combined documentation patch actual `ARCHITECTURE.md` context se match nahi
+hui. Patch atomic failure ke baad actual tail inspect ki, correct context use kiya aur
+all intended files re-verified kiye. Koi partial change first attempt mein apply nahi hua.
+
+### Revision required
+
+Student ko Express se pehle JavaScript/Node/HTTP aur first CRUD API se pehle
+config/database/model/architecture ka dependency reason explain karna hai.
+
+### Next topic
+
+Topic 15 complete hone ke samay next topic Topic 16 tha; woh ab complete ho chuka hai.
+
+## Topic 16 learning record
+
+### Topic completed
+
+Topic 16 — Definition of Done
+
+### Files created/modified
+
+- Created `notes/DEFINITION_OF_DONE.md`
+- Created `notes/topics/phase-0/016-definition-of-done.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/DEVELOPMENT_PHASES.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh completion-policy topic hai.
+
+### Concepts introduced
+
+- Definition of Done (DoD)
+- Acceptance criteria versus DoD
+- Evidence-based completion
+- Topic, code-feature and phase DoD
+- Proportional verification and not-applicable evidence
+- Success/failure paths and side effects
+- Documentation synchronization
+- Done versus deployed
+- Regression and reopening completed work
+
+### Data/control flow
+
+```text
+Objective/acceptance criteria -> implementation or learning artifact
+-> proportional verification -> documentation sync -> reviewable diff
+-> completion decision
+```
+
+### Verification performed
+
+- Topic, feature and phase checklists; evidence matrix; not-applicable rule; examples;
+  misconceptions; exercise and easy-English answer verify kiye gaye.
+- Exactly Topics 1–16 complete aur Topic 17 planned verify hua.
+- `DEFINITION_OF_DONE.md` reusable completion gate ke roop mein created.
+- No code/package/runtime/API/database change applicable tha.
+
+### Errors solved
+
+Koi meaningful error nahi aaya.
+
+### Revision required
+
+Student ko “code written”, “works on my machine”, “tested”, “done” and “deployed”
+states ka difference explain karna hai.
+
+### Next topic
+
+Topic 16 complete hone ke samay next topic Topic 17 tha; woh ab complete ho chuka hai.
+
+## Topic 17 learning record
+
+### Topic completed
+
+Topic 17 — Learning documentation system
+
+### Files created/modified
+
+- Created `notes/LEARNING_SYSTEM.md`
+- Created `notes/each-code-file/README.md`
+- Created `notes/topics/phase-0/017-learning-documentation-system.md`
+- Updated `notes/BACKEND_ROADMAP.md`
+- Updated `notes/LEARNING_STATE.md`
+- Updated `notes/ARCHITECTURE.md`
+- Updated `LEARNING_MEMORY.md`
+
+### Packages installed
+
+None. Yeh documentation-workflow topic hai.
+
+### Concepts introduced
+
+- Chat memory versus durable project state
+- Single responsibility for learning documents
+- Before-topic read order and after-topic write order
+- Roadmap status versus learning-history record
+- Actual architecture/API truth and documentation drift
+- Phase-wise topic notes
+- Flattened per-source-file learning-note naming
+- Debug incident lifecycle and verification evidence
+- Recovery/resume workflow for a new chat/session
+
+### Data/control flow
+
+```text
+Master plan + roadmap + learning state + current architecture/API/debug evidence
+  -> select one next topic
+  -> teach/implement/debug/verify
+  -> synchronize affected durable documents
+  -> next session resumes from files, not chat memory
+```
+
+### Verification performed
+
+- All required permanent learning files and Phase 0 topic notes exist.
+- `notes/each-code-file/README.md` contains naming rule and required 20-section template.
+- Roadmap has exactly 17 complete Phase 0 topics and zero planned Phase 0 topics.
+- Phase practical outputs and 17/17 status are recorded.
+- Learning state and memory point to Phase 1 Topic 18 without starting it.
+- Architecture/API documents still reflect actual no-application-code state.
+- `git diff --check` executed; no whitespace errors reported.
+
+### Errors solved
+
+First combined final-audit command visible output return nahi kar saka. Result assume
+nahi kiya; audit ko two smaller commands mein rerun karke all expected evidence
+successfully capture ki. Incident `notes/DEBUG_LOG.md` mein recorded hai.
+
+### Revision required
+
+Student ko bina notes dekhe explain karna hai ki next session mein progress ka source
+of truth kaunsi files hain aur code/API/error change par kaunsi docs update hongi.
+
+### Next topic
+
+Phase 1, Topic 18 — Terminal kya hai? Abhi teach/implement nahi kiya gaya.
+
+## Phase 0 completion record
+
+- Topics complete: 17/17
+- Practical product definition: verified
+- Backend roadmap/progress tracker: verified
+- Architecture/system overview: verified
+- Learning-state/documentation system: verified
+- Application code/packages/runtime: not applicable and intentionally absent
+- Next phase readiness: Phase 1 can start when student requests the next topic

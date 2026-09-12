@@ -323,5 +323,4 @@ needs to run.**
 ## Topic boundary
 
 Topic 8 mein runtime ka foundational mental model complete hua. **Source code aur
-running process ka difference** Topic 9 hai aur abhi cover nahi kiya gaya.
-
+running process ka difference** Topic 9 ko iske baad separately complete kiya gaya.
