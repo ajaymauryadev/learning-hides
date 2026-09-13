@@ -10,11 +10,11 @@
 ## Current position
 
 - Current phase: Phase 2 — Git aur repository foundation
-- Last completed topic: Topic 50 — `git commit`
-- Next topic: Topic 51 — `git log`
+- Last completed topic: Topic 53 — `git push`
+- Next topic: Topic 54 — `git pull`
 - Phase 0 progress: 17/17 topics complete
 - Phase 1 progress: 16/16 topics complete
-- Phase 2 progress: 17/24 topics complete
+- Phase 2 progress: 20/24 topics complete
 
 ## Topic 1 learning record
 
@@ -2850,6 +2850,165 @@ Student ko save-game analogy se staged-only local commit and push difference exp
 ### Next topic
 
 Topic 51 — `git log`. Abhi start nahi हुआ।
+
+## Topic 51 learning record
+
+### Topic completed
+
+Topic 51 — `git log`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/051-git-log.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None.
+
+### Concepts introduced
+
+- default and one-line history views
+- full/short commit hashes and commit subjects
+- decorations, HEAD/branch labels and graph view
+- parent relationships and custom formats
+- author versus committer date
+- file history, follow and message/author/date/path filters
+- locally known `--all` versus live remote state
+
+### Data/control flow
+
+```text
+start ref -> commit -> parent graph traversal -> filter/format -> history output
+```
+
+### Verification performed
+
+- six commits reachable from current HEAD at topic start.
+- latest commit `fdf6d79...`, parent `a5a3b51...`, expected subject and metadata inspected.
+- oneline/decorate, graph/all, custom-format and path-specific history inspected.
+- local `main` observed one commit ahead of cached `origin/main`.
+- no staging, commit, push, fetch, reset, amend or deletion performed.
+
+### Errors solved
+
+No project error. Pager, unborn history, short-ID, locally-known refs and renamed-file history
+misconceptions documented.
+
+### Revision required
+
+Student ko diary analogy से hash/message/parent और local-versus-remote labels explain करने हैं।
+
+### Next topic
+
+Topic 52 — `git remote`. Abhi start nahi हुआ।
+
+## Topic 52 learning record
+
+### Topic completed
+
+Topic 52 — `git remote`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/052-git-remote.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None.
+
+### Concepts introduced
+
+- remote name as local URL shortcut
+- fetch versus push URLs
+- `git remote`, `-v`, `get-url` and network-free `show -n`
+- origin convention versus magic-name misconception
+- branch upstream and remote-tracking reference relation
+- add/set-url/rename/remove semantics and safety
+- credentials, ownership and parent-repository boundary
+
+### Data/control flow
+
+```text
+remote inspection -> local config/known refs -> name, URL and tracking report
+```
+
+### Verification performed
+
+- exactly one remote name `origin` observed.
+- fetch/push URLs both point to configured `learning-hides.git` HTTPS address.
+- local `main` upstream `origin/main`.
+- local `show -n` and relevant remote/branch config inspected.
+- URL contained no embedded credential.
+- no remote config mutation or network command performed.
+
+### Errors solved
+
+No project error. Existing/name, live-ref, configuration-versus-transfer and URL-credential
+misconceptions documented.
+
+### Revision required
+
+Student ko phone-contact analogy से origin, URL, fetch/push और upstream relation explain करना है।
+
+### Next topic
+
+Topic 53 — `git push`. Abhi start nahi हुआ।
+
+## Topic 53 learning record
+
+### Topic completed
+
+Topic 53 — `git push`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/053-git-push.md`
+- Updated roadmap, learning state, architecture and durable memory
+- Recorded Topics 51–53 documentation in one local commit and published it to `origin/main`
+
+### Packages installed
+
+None.
+
+### Concepts introduced
+
+- committed history publication versus working files
+- explicit remote/branch push command
+- live remote preflight and fast-forward condition
+- local commit versus push and remote-tracking update
+- upstream `-u`, authentication/authorization and branch policy
+- non-fast-forward rejection and force-push risk
+
+### Data/control flow
+
+```text
+local commit/ref -> authenticate/policy -> object transfer -> remote ref update
+```
+
+### Verification performed
+
+- preflight live remote main matched cached `origin/main` at `a5a3b51...`.
+- local branch was ahead 1 and behind 0 before Topic 53 commit.
+- exactly seven Topics 51–53 learning/documentation paths staged and reviewed.
+- local commit `docs: complete phase 2 topics 51 to 53` created.
+- normal `git push origin main` succeeded without force.
+- local HEAD, cached `origin/main` and live remote main matched after push; ahead/behind `0/0`.
+- working tree clean after push; no pull/reset/amend/tag push/application operation.
+
+### Errors solved
+
+No project error. Non-fast-forward, authentication, permissions, uncommitted-file and wrong-destination
+cases documented.
+
+### Revision required
+
+Student को shared-drive analogy से commit/push, fast-forward और rejection safety explain करनी है।
+
+### Next topic
+
+Topic 54 — `git pull`. Abhi start nahi हुआ।
 
 ## Phase 1 completion record
 

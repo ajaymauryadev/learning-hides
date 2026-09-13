@@ -516,6 +516,41 @@ reviewed index snapshot
 Commit history records reviewed documentation state locally; it is not application deployment or
 remote publication.
 
+History-inspection traversal:
+
+```text
+HEAD -> main -> latest commit -> parent -> older parent(s)
+```
+
+`git log` reads and formats this locally known commit graph. Decorations show references such as
+local `main` and cached `origin/main`; they do not perform a live remote query or change history.
+
+Remote configuration mapping:
+
+```text
+local name origin
+  -> fetch URL: learning-hides GitHub repository
+  -> push URL:  learning-hides GitHub repository
+local main -> upstream origin/main (cached remote-tracking ref)
+```
+
+Remote configuration is a local address/tracking layer. It does not itself fetch, integrate,
+publish, create or delete the hosted repository.
+
+Remote publication transition:
+
+```text
+local main commit graph
+  -> git push origin main
+  -> remote authentication/authorization and policy
+  -> missing Git objects transfer
+  -> remote main fast-forwards
+  -> local cached origin/main reflects accepted tip
+```
+
+Only committed documentation history is published. Uncommitted working files, application runtime,
+database state and deployment remain separate.
+
 ## Implemented file relationships
 
 None. Abhi sirf learning documentation hai.

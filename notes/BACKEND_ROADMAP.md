@@ -105,9 +105,9 @@ It has not started.
 | 48 | `git diff` | Topic 47 | Unstaged differences inspect karna | complete |
 | 49 | `git diff --cached` | Topic 48 | Staged snapshot inspect karna | complete |
 | 50 | `git commit` | Topic 49 | Reviewed local history record create karna | complete |
-| 51 | `git log` | Topic 50 | History inspect karna | planned |
-| 52 | `git remote` | Topic 51 | Remote mappings inspect/configure karna | planned |
-| 53 | `git push` | Topic 52 | Local records remote par publish karna | planned |
+| 51 | `git log` | Topic 50 | History inspect karna | complete |
+| 52 | `git remote` | Topic 51 | Remote mappings inspect/configure karna | complete |
+| 53 | `git push` | Topic 52 | Local records remote par publish karna | complete |
 | 54 | `git pull` | Topic 53 | Remote changes safely integrate karna | planned |
 | 55 | Safe Git workflow | Topics 44–54 | Repeatable inspect-stage-review-record-sync flow | planned |
 | 56 | Secrets ko Git se bachana | Topic 55 | Secret prevention and incident response | planned |
@@ -122,6 +122,6 @@ It has not started.
 - [ ] GitHub remote configured and verified
 - [ ] Topics 35–57 individually taught and verified
 
-**Phase 2 status: in progress (17/24 topics complete).**
+**Phase 2 status: in progress (20/24 topics complete).**
 
-Next ordered topic: **Topic 51 — `git log`.** It has not started.
+Next ordered topic: **Topic 54 — `git pull`.** It has not started.

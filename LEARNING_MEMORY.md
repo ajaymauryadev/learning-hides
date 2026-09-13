@@ -76,7 +76,10 @@ Chat memory par depend nahi karna. `BACKEND_ROADMAP.md` direction dega aur `LEAR
 - Phase 2 Topic 48 complete: unstaged diff boundary and patch-reading model established.
 - Phase 2 Topic 49 complete: staged/cached diff and pre-commit review model established.
 - Phase 2 Topic 50 complete: reviewed staged snapshot recorded as a local commit.
+- Phase 2 Topic 51 complete: commit-history navigation and filtering model established.
+- Phase 2 Topic 52 complete: remote name/URL/config inspection model established.
+- Phase 2 Topic 53 complete: verified normal fast-forward publication to `origin/main` established.
 - Current curriculum phase: Phase 2 — Git aur repository foundation.
 - Current topic lesson folder: `notes/topics/phase-2/`.
-- Next authorized learning step: **Phase 2, Topic 51 — `git log`.**
-- Topic 51 tabhi start karna hai jab student next topic ke liye kahe.
+- Next authorized learning step: **Phase 2, Topic 54 — `git pull`.**
+- Topic 54 tabhi start karna hai jab student next topic ke liye kahe.
