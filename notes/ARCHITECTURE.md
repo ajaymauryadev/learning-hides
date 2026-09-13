@@ -551,6 +551,32 @@ local main commit graph
 Only committed documentation history is published. Uncommitted working files, application runtime,
 database state and deployment remain separate.
 
+Remote integration transition:
+
+```text
+remote main -> fetch objects/update known remote state -> FETCH_HEAD
+  -> chosen integration: fast-forward | merge | rebase | abort
+  -> local main and working tree may update
+```
+
+TaskForge learning repository uses explicit `--ff-only` when a straight update is expected, so
+divergence stops instead of silently creating a merge. Pull remains separate from push and deploy.
+
+Safe repository-change lifecycle:
+
+```text
+root/branch/status/remote inspection
+  -> update strategy and coherent edit
+  -> unstaged review and relevant verification
+  -> exact index selection and cached review
+  -> meaningful local commit
+  -> live remote preflight and normal push
+  -> local/cached/live post-verification
+```
+
+Unexpected state stops the flow for investigation. Force, destructive recovery and claims about
+tests/deployment are not inferred from successful Git commands.
+
 ## Implemented file relationships
 
 None. Abhi sirf learning documentation hai.

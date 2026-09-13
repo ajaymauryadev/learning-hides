@@ -54,3 +54,19 @@ gaya.
 - Safety: `finally` block listener stop karta raha; no permission escalation attempted.
 - Smallest fallback: same process loopback client connected and server accepted socket.
 - Verification: connection true/accepted true and listener inactive after cleanup.
+
+## Topic 55 — Documentation example triggered conflict-marker check
+
+- Expected: staged Topic 54–55 documentation pass `git diff --cached --check`.
+- Actual: check exited `2` and reported three leftover conflict markers in Topic 54.
+- Failing layer: Markdown teaching example, real Git merge state nahi.
+- Evidence: lines containing literal `<<<<<<<`, `=======` and `>>>>>>>` marker forms.
+- Root cause: conflict explanation used raw markers at line start, exactly what Git safety check
+  detects.
+- Safety response: commit and push gate stopped; no history or remote mutation occurred.
+- Smallest fix: marker lines ko descriptive labels ke saath retain kiya so concept visible rahe but
+  raw unresolved-marker signature na ho.
+- Verification required: changed lesson re-stage, cached whitespace/conflict-marker check rerun,
+  exact staged set re-verify, then only commit/push.
+- Prevention/interview lesson: automated gate failure ko bypass mat karo; true merge conflict aur
+  intentional documentation example ka difference evidence se establish karke smallest fix karo.
