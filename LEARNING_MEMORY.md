@@ -73,7 +73,10 @@ Chat memory par depend nahi karna. `BACKEND_ROADMAP.md` direction dega aur `LEAR
 - Phase 2 Topic 45 complete: long/short/porcelain repository-status model established.
 - Phase 2 Topic 46 complete: TaskForge ignore rules and secret-prevention limits established.
 - Phase 2 Topic 47 complete: exact-path staging and content-snapshot timing established.
+- Phase 2 Topic 48 complete: unstaged diff boundary and patch-reading model established.
+- Phase 2 Topic 49 complete: staged/cached diff and pre-commit review model established.
+- Phase 2 Topic 50 complete: reviewed staged snapshot recorded as a local commit.
 - Current curriculum phase: Phase 2 — Git aur repository foundation.
 - Current topic lesson folder: `notes/topics/phase-2/`.
-- Next authorized learning step: **Phase 2, Topic 48 — `git diff`.**
-- Topic 48 tabhi start karna hai jab student next topic ke liye kahe.
+- Next authorized learning step: **Phase 2, Topic 51 — `git log`.**
+- Topic 51 tabhi start karna hai jab student next topic ke liye kahe.

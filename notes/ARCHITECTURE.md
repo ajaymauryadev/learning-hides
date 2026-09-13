@@ -482,6 +482,40 @@ taskforge-backend/.gitignore (reviewed working content)
 Only the exact policy file was selected. Broad directory/repository staging was avoided while
 other accumulated learning documents remain unstaged for separate review.
 
+Unstaged content-review boundary:
+
+```text
+index / staging area
+  <-> plain git diff
+tracked working-tree content
+```
+
+Plain diff does not normally include untracked lesson files or fully staged-only changes. Status
+plus targeted diff review is therefore required before selecting the next proposed snapshot.
+
+Staged content-review boundary:
+
+```text
+HEAD / last commit
+  <-> git diff --cached (same idea as --staged)
+index / proposed next snapshot
+```
+
+Cached diff is the final content-review view before commit creation. It remains separate from
+unstaged working edits, untracked files, runtime behavior and remote publication.
+
+Local commit transition:
+
+```text
+reviewed index snapshot
+  -> commit object (tree + parent + identity/time + message)
+  -> current main branch and HEAD move to new commit
+  -> remote-tracking origin/main remains unchanged until synchronization
+```
+
+Commit history records reviewed documentation state locally; it is not application deployment or
+remote publication.
+
 ## Implemented file relationships
 
 None. Abhi sirf learning documentation hai.

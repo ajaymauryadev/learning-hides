@@ -10,11 +10,11 @@
 ## Current position
 
 - Current phase: Phase 2 — Git aur repository foundation
-- Last completed topic: Topic 47 — `git add`
-- Next topic: Topic 48 — `git diff`
+- Last completed topic: Topic 50 — `git commit`
+- Next topic: Topic 51 — `git log`
 - Phase 0 progress: 17/17 topics complete
 - Phase 1 progress: 16/16 topics complete
-- Phase 2 progress: 14/24 topics complete
+- Phase 2 progress: 17/24 topics complete
 
 ## Topic 1 learning record
 
@@ -2694,6 +2694,162 @@ Student ko exact-path add, index destination and later-edit behavior explain kar
 ### Next topic
 
 Topic 48 — `git diff`. Abhi start nahi hua.
+
+## Topic 48 learning record
+
+### Topic completed
+
+Topic 48 — `git diff`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/048-git-diff.md`
+- Updated roadmap, learning state, architecture and durable memory
+
+### Packages installed
+
+None.
+
+### Concepts introduced
+
+- plain diff: working tree versus index
+- patch headers, hunks, context and `+`/`-` lines
+- exact path filtering and summary formats
+- untracked and fully-staged change limitations
+- whitespace checking and Windows line-ending warning
+- diff view versus durable commit history
+
+### Data/control flow
+
+```text
+index + tracked working content -> comparison -> unstaged patch/summary
+```
+
+### Verification performed
+
+- topic-start repository clean at commit `a5a3b51...`.
+- real tracker updates appeared as tracked unstaged changes.
+- lesson itself remained untracked and correctly absent from plain diff.
+- name-status, stat, exact-path patch and whitespace checks inspected.
+- no staging, commit, restore, delete or network operation performed.
+
+### Errors solved
+
+No project error. Empty-diff, untracked-file, staged-boundary and line-ending misconceptions
+documented.
+
+### Revision required
+
+Student ko plain comparison endpoints aur patch anatomy explain karni hai.
+
+### Next topic
+
+Topic 49 — `git diff --cached`. Abhi start nahi hua.
+
+## Topic 49 learning record
+
+### Topic completed
+
+Topic 49 — `git diff --cached`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/049-git-diff-cached.md`
+- Updated roadmap, learning state, architecture and durable memory
+- Staged only reviewed `notes/topics/phase-2/048-git-diff.md`
+
+### Packages installed
+
+None.
+
+### Concepts introduced
+
+- HEAD versus staging-area comparison
+- cached/staged aliases
+- plain versus cached diff with A/B/C example
+- staged patch, names, status, stat and whitespace check
+- empty output limitations
+- cached diff as pre-commit secret/unrelated-change safety gate
+
+### Data/control flow
+
+```text
+HEAD snapshot + index snapshot -> cached comparison -> proposed commit patch
+```
+
+### Verification performed
+
+- baseline cached diff empty and staged count zero.
+- only Topic 48 lesson staged as a new file.
+- cached name/status, stat, exact-path content and whitespace check verified.
+- plain diff for fully staged lesson empty; HEAD unchanged.
+- no commit, restore, delete or network operation performed.
+
+### Errors solved
+
+No project error. Empty cached diff, later edits, untracked files and cache-name misconceptions
+documented with simple examples.
+
+### Revision required
+
+Student ko notebook analogy and A/B/C comparison se plain versus cached diff explain karna hai.
+
+### Next topic
+
+Topic 50 — `git commit`. Abhi start nahi hua.
+
+## Topic 50 learning record
+
+### Topic completed
+
+Topic 50 — `git commit`
+
+### Files created/modified
+
+- Created `notes/topics/phase-2/050-git-commit.md`
+- Updated roadmap, learning state, architecture and durable memory
+- Recorded Topics 48–50 documentation in one local commit
+
+### Packages installed
+
+None.
+
+### Concepts introduced
+
+- index snapshot to local history transition
+- commit tree/snapshot, parent, identity, time and message
+- commit hash and branch/HEAD movement
+- staged-only inclusion and clean-state limitation
+- local commit versus remote push/deployment
+- message quality, coherent scope, `-a`, amend and hook risks
+
+### Data/control flow
+
+```text
+reviewed index -> git commit -> commit object/history -> branch and HEAD move
+```
+
+### Verification performed
+
+- exactly seven expected learning/documentation paths staged.
+- cached name/status/content and whitespace checks passed before commit.
+- one local commit created with message `docs: complete phase 2 topics 48 to 50`.
+- new commit parent matched pre-commit HEAD and commit path set matched staged path set.
+- repository clean after commit and local branch one commit ahead of cached `origin/main`.
+- no push, pull, amend, reset or application operation performed.
+
+### Errors solved
+
+No project error. Identity, nothing-to-commit, staging-timing, local-versus-remote and history-rewrite
+misconceptions documented.
+
+### Revision required
+
+Student ko save-game analogy se staged-only local commit and push difference explain karna hai.
+
+### Next topic
+
+Topic 51 — `git log`. Abhi start nahi हुआ।
 
 ## Phase 1 completion record
 

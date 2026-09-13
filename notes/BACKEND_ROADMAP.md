@@ -102,9 +102,9 @@ It has not started.
 | 45 | `git status` | Topic 44 | Repository state inspection | complete |
 | 46 | `.gitignore` | Topic 45 | Unwanted/unsecret files exclusion rules | complete |
 | 47 | `git add` | Topic 46 | Intended changes stage karna | complete |
-| 48 | `git diff` | Topic 47 | Unstaged differences inspect karna | planned |
-| 49 | `git diff --cached` | Topic 48 | Staged snapshot inspect karna | planned |
-| 50 | `git commit` | Topic 49 | Reviewed local history record create karna | planned |
+| 48 | `git diff` | Topic 47 | Unstaged differences inspect karna | complete |
+| 49 | `git diff --cached` | Topic 48 | Staged snapshot inspect karna | complete |
+| 50 | `git commit` | Topic 49 | Reviewed local history record create karna | complete |
 | 51 | `git log` | Topic 50 | History inspect karna | planned |
 | 52 | `git remote` | Topic 51 | Remote mappings inspect/configure karna | planned |
 | 53 | `git push` | Topic 52 | Local records remote par publish karna | planned |
@@ -122,6 +122,6 @@ It has not started.
 - [ ] GitHub remote configured and verified
 - [ ] Topics 35–57 individually taught and verified
 
-**Phase 2 status: in progress (14/24 topics complete).**
+**Phase 2 status: in progress (17/24 topics complete).**
 
-Next ordered topic: **Topic 48 — `git diff`.** It has not started.
+Next ordered topic: **Topic 51 — `git log`.** It has not started.
