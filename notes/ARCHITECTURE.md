@@ -577,6 +577,32 @@ root/branch/status/remote inspection
 Unexpected state stops the flow for investigation. Force, destructive recovery and claims about
 tests/deployment are not inferred from successful Git commands.
 
+Secret/configuration boundary:
+
+```text
+Git history -> source code + safe .env.example variable contract
+local runtime -> ignored .env with private values
+CI/production -> approved encrypted secret configuration/manager
+logs/responses -> sensitive fields omitted or redacted
+```
+
+Ignore rules are prevention, not revocation or history cleanup. A pushed credential is treated as
+exposed: revoke/rotate first, then audit and coordinate code/history/external-copy remediation.
+
+Phase 2 repository foundation boundary:
+
+```text
+Practicle/.git/                 -> intentional parent Git repository and GitHub remote
+Practicle/taskforge-backend/
+|-- .gitignore                 -> tracked generated/private path rules
+|-- .env.example               -> tracked safe empty-value configuration contract
+`-- README.md                  -> tracked project purpose, status and boundary
+```
+
+The historical parentless root commit predates TaskForge. Phase 2 ends with an accurately named,
+parented TaskForge foundation completion commit; no nested `.git`, application runtime, package or
+database exists yet.
+
 ## Implemented file relationships
 
 None. Abhi sirf learning documentation hai.
